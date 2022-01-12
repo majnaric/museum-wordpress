@@ -1,0 +1,80 @@
+.carouselAll {
+  box-sizing: border-box;
+}
+
+.carouselBody {
+  /* font-family: "Roboto", sans-serif; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh; */
+  margin: 0;
+  /* position: relative; */
+  margin-bottom: 0;
+
+  @mixin atSmall {
+    margin-top: 202rem;
+  }
+
+  @mixin atLarge {
+    margin-top: 5.5rem;
+  }
+}
+
+.carouselIMG {
+  height: 500px;
+  object-fit: cover;
+
+  @mixin atSmall {
+    width: 100vw;
+  }
+
+  @mixin atLarge {
+    width: 1000px;
+  }
+}
+
+.carousel {
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+  height: 500px;
+  width: 1000px;
+  overflow: hidden;
+
+  &__title {
+    position: relative;
+    margin-top: 72rem;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 3rem;
+  }
+}
+
+.carousel-image-container {
+  display: flex;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carouselBTN {
+  background-color: rebeccapurple;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  width: 10%;
+  position: relative;
+  top: -17rem;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:focus {
+  outline: none;
+}

@@ -1,0 +1,181 @@
+.row {
+  &__3 {
+    float: left;
+
+    @mixin atSmall {
+      width: 100%;
+    }
+    @mixin atMedium {
+      width: 100%;
+    }
+
+    @mixin atLarge {
+      width: 25%;
+    }
+  }
+
+  &__3--zaglavlje-input {
+    padding-top: 15px;
+    height: 10rem;
+    float: left;
+    position: relative;
+
+    @mixin atSmall {
+      top: 2rem;
+      width: 100%;
+    }
+
+    @mixin atLarge {
+      top: 1.3rem;
+      width: 25%;
+      right: 10rem;
+    }
+  }
+
+  &__3--zaglavlje-author {
+    float: left;
+    position: relative;
+
+    @mixin atSmall {
+      width: 100%;
+      font-size: 0.8rem;
+      text-align: center;
+      top: -1rem;
+    }
+
+    @mixin atLarge {
+      width: 30%;
+      right: -17rem;
+    }
+    & p {
+      margin-top: 3rem;
+    }
+  }
+
+  &__4 {
+    float: left;
+
+    @mixin atSmall {
+      width: 100%;
+    }
+    @mixin atMedium {
+      width: 100%;
+    }
+
+    @mixin atLarge {
+      width: 33.33%;
+    }
+  }
+
+  &__4-forMedium {
+    @mixin atMedium {
+      width: 90%;
+      left: 5%;
+      margin: 30px 0 50px 0;
+    }
+
+    @mixin atLarge {
+      float: left;
+      left: 0;
+      width: 33.33%;
+      margin: 0;
+    }
+  }
+
+  &__5 {
+    float: left;
+
+    @mixin atSmall {
+      width: 100%;
+    }
+
+    @mixin atLarge {
+      width: 41.66%;
+    }
+  }
+
+  &__6 {
+    float: left;
+
+    @mixin atSmall {
+      width: 100%;
+    }
+
+    @mixin atLarge {
+      width: 50%;
+    }
+  }
+
+  &__6-forMedium {
+    @mixin atMedium {
+      width: 90%;
+      left: 5%;
+    }
+
+    @mixin atLarge {
+      float: left;
+      width: 50%;
+      left: 0;
+      /* margin: 0; */
+    }
+  }
+  &__8 {
+    float: left;
+    @mixin atSmall {
+      width: 100%;
+    }
+
+    @mixin atLarge {
+      width: 66.66%;
+    }
+  }
+
+  &__8--centered {
+    margin-left: auto;
+    margin-right: auto;
+    @mixin atSmall {
+      width: 100%;
+    }
+
+    @mixin atLarge {
+      width: 66.66%;
+    }
+  }
+
+  &__8--right {
+    float: right;
+    @mixin atSmall {
+      width: 100%;
+    }
+
+    @mixin atLarge {
+      width: 66.66%;
+    }
+  }
+
+  &__10--centered {
+    margin-left: auto;
+    margin-right: auto;
+    @mixin atSmall {
+      width: 100%;
+    }
+
+    @mixin atLarge {
+      width: 83.33%;
+    }
+  }
+
+  &__12 {
+    @mixin atSmall {
+      width: 100%;
+    }
+
+    @mixin atLarge {
+      width: 100%;
+    }
+  }
+}
+
+.clear-me {
+  clear: both;
+}

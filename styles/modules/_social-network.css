@@ -1,0 +1,46 @@
+.social-network {
+  margin-left: 4rem;
+
+  @mixin atMedium {
+    width: 90%;
+  }
+
+  @mixin atLarge {
+    width: 35%;
+  }
+
+  &__icon {
+    position: relative;
+    top: -8rem;
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: $mainGrey;
+    border: none;
+    margin: 0 10px;
+
+    @mixin atSmall {
+      margin: 0 10px;
+    }
+
+    @mixin atMedium {
+      margin: 0 3.2rem;
+    }
+
+    @mixin atLarge {
+      margin: 0 10px;
+    }
+  }
+
+  &__icon:hover {
+    color: $mainOrange;
+  }
+}
+
+.social-network i {
+  @mixin atMedium {
+    margin-right: 80px;
+  }
+  @mixin atLarge {
+    margin-right: 78px;
+  }
+}

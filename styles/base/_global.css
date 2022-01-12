@@ -1,0 +1,17 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: $mainGrey;
+  background-color: #fff;
+
+  @mixin atSmall {
+    /* background-color: blue; */
+  }
+  /* @mixin atLarge {
+    width: 97.8vw;
+  } */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

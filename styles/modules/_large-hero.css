@@ -1,0 +1,163 @@
+.large-hero-wrap {
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  /* background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 25%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0.3) 75%,
+      rgba(255, 255, 255, 1) 100%
+    ),
+    url("/app/assets/images/hero-image-large.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw; */
+
+  @mixin atSmall {
+    /* width: 47rem; */
+  }
+
+  @mixin atLarge {
+    /* width: 98.9vw; */
+  }
+}
+
+.large-hero {
+  opacity: 0.6;
+  position: relative;
+
+  @mixin atSmall {
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0) 25%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0.3) 75%,
+        rgba(255, 255, 255, 1) 100%
+      ),
+      url("/images/hero-image-small.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 97vh;
+  }
+
+  @mixin atLarge {
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0) 25%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0.3) 75%,
+        rgba(255, 255, 255, 1) 100%
+      ),
+      url("/images/hero-image-large.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  &__section {
+    position: absolute;
+    top: 14rem;
+    /* width: 45rem; */
+    height: 18rem;
+    text-align: center;
+    /* background-color: rgba(255, 255, 255, 0.2);*/
+    color: $mainGrey;
+    /* padding: 0.625rem; */
+    /* border: 1px solid #333;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 15px 1px #333; */
+
+    @mixin atSmall {
+      width: 80%;
+      /* margin: 0 auto; */
+      left: 2.5rem;
+    }
+
+    @mixin atMedium {
+      top: 35%;
+      width: 80%;
+      position: absolute;
+      margin: 0 5%;
+    }
+
+    @mixin atLarge {
+      width: 45rem;
+      top: 10rem;
+      left: 39rem;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $mainGrey;
+    /* text-shadow: 4px 4px 4px rgba(0, 0, 0, 1); */
+    margin-bottom: 0.5rem;
+
+    @mixin atSmall {
+      font-size: 2.3rem;
+    }
+
+    @mixin atMedium {
+      font-size: 4rem;
+    }
+
+    @mixin atLarge {
+      font-size: 5rem;
+    }
+  }
+
+  &__subtitle {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    font-weight: 300;
+    /* text-shadow: 2px 2px 2px rgba(150, 150, 150, 1); */
+    @mixin atSmall {
+      font-size: 1.9rem;
+    }
+  }
+}
+
+.exhibitions--large-hero {
+  opacity: 0.6;
+  position: relative;
+
+  @mixin atSmall {
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0) 25%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0.3) 75%,
+        rgba(255, 255, 255, 1) 100%
+      ),
+      url("/images/hero-image-small.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 100vw; */
+    height: 97vh;
+  }
+
+  @mixin atLarge {
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0) 25%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0.3) 75%,
+        rgba(255, 255, 255, 1) 100%
+      ),
+      url("/images/hero-image-large.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 6rem;
+    /* width: 100vw; */
+    /* border-bottom: 3px solid black; */
+  }
+}

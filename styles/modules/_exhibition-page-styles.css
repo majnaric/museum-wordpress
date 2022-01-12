@@ -1,0 +1,119 @@
+.museum-logo {
+  /* position: absolute;
+  margin: -0.4rem -29rem; */
+  & h2 {
+    position: relative;
+    top: -2.2rem;
+    right: 10rem;
+
+    @mixin atSmall {
+      margin-top: 20px;
+    }
+  }
+}
+
+.exhibition-page__title {
+  text-align: center;
+  font-size: 2rem;
+
+  @mixin atSmall {
+    position: relative;
+    top: -27rem;
+    font-size: 1.7rem;
+  }
+
+  @mixin atLarge {
+    top: 0;
+  }
+}
+.exhibition-page--expo__title {
+  /* margin-top: 10rem; */
+  text-align: center;
+  font-size: 2.5rem;
+  letter-spacing: 15px;
+}
+
+.exhibition-page__news-and-blog {
+  position: relative;
+  top: -1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  height: fit-content;
+
+  @mixin atSmall {
+    height: 80rem;
+  }
+
+  @mixin atLarge {
+    height: 45rem;
+    height: fit-content;
+  }
+}
+
+.exhibition-page--expo__description {
+  padding: 5px;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+
+  @mixin atSmall {
+    margin-top: 42rem;
+    color: #000;
+  }
+  @mixin atLarge {
+    margin-top: 0;
+  }
+}
+.exhibition-page--expo__description p {
+  padding: 1.5rem;
+  line-height: 1.7rem;
+  text-align: justify;
+  font-size: 1.3rem;
+}
+
+.exhibition-page--expo__photos {
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 30rem;
+}
+
+.exhibition-page--expo-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.exhibition-page--image-container {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+  transition: all 1s;
+  /* border: 1px solid #fff; */
+  -webkit-box-shadow: 5px 5px 14px 3px rgba(0, 0, 0, 0.79);
+  box-shadow: 5px 5px 14px 3px rgba(0, 0, 0, 0.79);
+  object-fit: contain;
+  object-position: center;
+}
+
+.exhibition-page--expo-resize {
+  transition: all 1s;
+
+  /* height: 98vh;
+    width: 100vw; */
+
+  /* position: relative; */
+  object-position: left top;
+  top: 6rem;
+  z-index: 100;
+
+  @mixin atSmall {
+    transform: scale(2.6);
+  }
+
+  @mixin atLarge {
+    transform: scale(4.5);
+  }
+}

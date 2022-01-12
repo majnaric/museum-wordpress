@@ -1,0 +1,26 @@
+/* 
+Theme Name: Imaginary Museum
+Author: Goran Majnarić
+Version: 1.0
+*/
+
+@import "normalize.css";
+@import "./styles/base/_mixins";
+@import "./styles/base/_variables";
+@import "./styles/base/_global";
+@import "./styles/modules/_large-hero";
+@import "./styles/modules/_page-section";
+@import "./styles/modules/_wrapper";
+@import "./styles/modules/_row";
+@import "./styles/modules/_btn";
+@import "./styles/modules/_container";
+@import "./styles/modules/_social-network";
+@import "./styles/modules/_carousel";
+@import "./styles/modules/_footer";
+@import "./styles/modules/_header";
+@import "./styles/modules/_primary-nav";
+@import "./styles/modules/_profile-cards";
+@import "./styles/modules/_reveal-item";
+@import "./styles/modules/_modal";
+@import "./styles/modules/_post-style";
+@import "./styles/modules/_exhibition-page-styles.css";

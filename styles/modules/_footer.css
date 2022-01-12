@@ -1,0 +1,63 @@
+.zaglavlje {
+  /* position: relative; */
+  background-color: #fff;
+
+  @mixin atSmall {
+    top: 207rem;
+    border-top: none;
+    color: #333;
+  }
+
+  @mixin atMedium {
+    height: 40rem;
+    top: 198.5rem;
+    padding-top: 2rem;
+    color: #333;
+  }
+
+  @mixin atLarge {
+    top: 0;
+    height: 15rem;
+  }
+
+  &__container {
+    width: 90%;
+    margin: auto;
+  }
+
+  & a {
+    text-decoration: none;
+  }
+
+  &__title {
+    font-weight: 700;
+    color: #333;
+  }
+
+  &__input {
+    border: 2px solid #333;
+    border-right: none;
+    /* margin-right: 10px; */
+
+    @mixin atSmall {
+      width: 90%;
+    }
+
+    @mixin atLarge {
+      width: 67%;
+    }
+  }
+}
+
+i {
+  border: 2px solid #333;
+  border-left: none;
+  height: 1rem;
+}
+
+.fa-search {
+  height: 17px;
+  top: 0px;
+  position: relative;
+  padding: 2px;
+}

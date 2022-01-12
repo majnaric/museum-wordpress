@@ -1,0 +1,31 @@
+.wrapper {
+  @mixin atSmall {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @mixin atMedium {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @mixin atLarge {
+    overflow: hidden;
+    padding-left: 18px;
+    padding-right: 18px;
+    /* max-width: 1236px; */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &--narrow {
+    max-width: 470px;
+  }
+
+  &__header {
+    height: 5rem;
+  }
+
+  /* @mixin atSmall {
+    padding: 0;
+  } */
+}

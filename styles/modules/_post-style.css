@@ -1,0 +1,92 @@
+.post_item {
+  width: 80%;
+  margin: 3rem auto;
+  border: 1px solid #333;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.headline--post-title a {
+  color: rgb(167, 90, 17);
+  text-decoration: none;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.headline--post-title a:hover {
+  text-decoration: underline;
+}
+
+.meta-box {
+  background-color: rgba(241, 129, 23, 0.349);
+  width: fit-content;
+  height: fit-content;
+  padding: 0;
+  margin-left: 20px;
+  &--text {
+    margin: 0 0 10px;
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: rgb(182, 29, 9);
+  }
+}
+.exhibition-page--expo__description {
+  & .meta-box--text {
+    margin: 0 0 10px;
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: rgb(182, 29, 9);
+  }
+
+  & .meta-box--text a {
+    text-decoration: none;
+    color: rgb(182, 29, 9);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  & .post_item {
+    margin-bottom: 30px;
+  }
+}
+
+.pagination-links {
+  color: white;
+}
+.page-numbers:visited {
+  color: rgb(167, 90, 17);
+}
+
+.metabox {
+  &--container {
+    width: fit-content;
+    margin-left: 12rem;
+    margin-bottom: -1.75rem;
+  }
+
+  &--with-home-link {
+  }
+  &__blog-home-link {
+    background-color: brown;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    &:hover {
+      text-decoration: underline;
+    }
+    & i {
+      border: none;
+    }
+  }
+  &__main {
+    background-color: rgb(231, 160, 93);
+    color: #000;
+    padding: 10px;
+    & a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+}
