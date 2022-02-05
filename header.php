@@ -19,9 +19,9 @@
             <ul>
               <li <?php if(is_page('/home')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url() ?>">Home</a></li>
               <li <?php if(is_page('about-us')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/about-us') ?>">About</a></li>
-              <li><a href="#features">Events</a></li>
-              <li><a href="exhibition.html">Exhibitions</a></li>
-              <li><a href="#testimonials">Programs</a></li>
+              <li <?php if(get_post_type() == 'event') echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/events') ?>">Events</a></li>
+              <li <?php if(get_post_type() == 'exhibition') echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/exhibition') ?>">Exhibitions</a></li>
+              <li if(get_post_type() == 'department') echo 'class="current-menu-item"' ?><a href="<?php echo site_url('/departments') ?>">Departments</a></li>
               <li <?php if(is_page('privacy-policy')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/privacy-policy') ?>">Privacy Policy</a></li>
               <li <?php if(get_post_type() == 'post') echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/blog') ?>">Blog</a></li>
             </ul>
