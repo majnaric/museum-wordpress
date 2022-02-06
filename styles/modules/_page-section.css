@@ -295,16 +295,16 @@
     overflow: hidden;
 
     @mixin atSmall {
-      height: 29rem;
+      height: fit-content;
       width: 80%;
     }
 
     @mixin atMedium {
-      height: 32rem;
+      height: fit-content;
     }
 
     @mixin atLarge {
-      height: 15rem;
+      height: fit-content;
       width: 90%;
     }
     /* border-bottom: 1px solid #fff; */
@@ -312,12 +312,12 @@
 
   &__card-medium {
     @mixin atMedium {
-      height: 23rem;
+      height: fit-content;
       padding-top: 2rem;
     }
 
     @mixin atLarge {
-      height: 15rem;
+      height: fit-content;
     }
   }
 
@@ -416,7 +416,7 @@
 
     @mixin atLarge {
       position: relative;
-      margin: 1rem auto;
+      margin: 0 auto 2rem auto;
     }
   }
 
@@ -441,7 +441,9 @@
     @mixin atLarge {
       position: relative;
       margin: 0;
-      top: -100px;
+      height: fit-content;
+      top: 1px;
+      /* top: -100px; */
       width: 68%;
     }
   }

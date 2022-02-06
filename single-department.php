@@ -70,9 +70,11 @@ if($relatedCurators->have_posts()){
 while($relatedCurators->have_posts()){
 $relatedCurators->the_post(); ?>
 <li class="page-links">
-  <a class="page-links__links" href="<?php the_permalink(); ?>">
+  <a href="<?php the_permalink(); ?>">
+  <div class="page-links">
+  <span class="custom-underline"><?php the_title(); ?></span>
+  </div>
   <img class="curator-image" src="<?php the_post_thumbnail_url('curatorLandscape'); ?>" alt="">
-  <span><?php the_title(); ?></span>
 </a>
 </li>
   </p>
