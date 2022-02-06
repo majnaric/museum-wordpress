@@ -8,3 +8,67 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.page-links {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  color: $mainGrey;
+
+  /* color: $mainGrey; */
+
+  & a {
+    font-size: 1.5rem;
+    font-weight: 400;
+    &:hover {
+      font-weight: 700;
+    }
+  }
+}
+
+.normal-underline,
+.custom-underline {
+  position: relative;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  &:hover {
+    color: #333;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+}
+
+.custom-underline,
+.custom-underline:hover,
+.custom-underline:focus,
+.custom-underline:active {
+  color: #333;
+  text-decoration: none;
+}
+
+.custom-underline::after {
+  content: "";
+  position: absolute;
+}
+
+.page-links .custom-underline::after {
+  top: 95%;
+  height: 3px;
+  width: 0%;
+  left: 5%;
+  background-color: $mainGrey;
+  transition: 0.5s ease all;
+}
+
+.page-links:hover .custom-underline::after {
+  width: 90%;
+  transition: 0.3s ease all;
+}

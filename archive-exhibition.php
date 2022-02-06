@@ -41,8 +41,8 @@ the_post();?>
 <div class="row__12">
   
   <div class="events-section__date-and-text">
-  <a href="<?php the_permalink(); ?>"><h2 class="events-section__section-title events-section__section-title--archive-events"><?php the_title(); ?></h2></a>
-    <div class="events-section__date events-section__date-archive-events"><p><?php 
+  <a class="page-links" href="<?php the_permalink(); ?>"><h2 class="events-section__section-title events-section__section-title--archive-events custom-underline"><?php the_title(); ?></h2></a>
+    <div class="events-section__date events-section__date-archive-events"><p class="events-section__date--inside"><?php 
     $eventDate = new DateTime(get_field('event_date'));
     echo $eventDate-> format('M d');
     ?></p></div>          

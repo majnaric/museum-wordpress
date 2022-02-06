@@ -38,17 +38,22 @@ the_post();?>
 
 <div class="events-section__card events-section__card-medium events-section__card-medium--archive-events">
 
-<div class="row__12">
+  <div class="row__12">
   
-  <div class="events-section__date-and-text">
-  <a href="<?php the_permalink(); ?>"><h2 class="events-section__section-title events-section__section-title--archive-events"><?php the_title(); ?></h2></a>
-    <div class="events-section__date events-section__date-archive-events"><p><?php 
-    $eventDate = new DateTime(get_field('event_date'));
-    echo $eventDate-> format('M d');
-    ?></p></div>          
-    <p class="events-section__content-archive-events"><?php echo wp_trim_words(get_the_content(), 18); ?></p>
+    <div class="events-section__date-and-text">
+      <div class="events-section__single-events-title">
+        <a class="page-links" href="<?php the_permalink(); ?>"><h2 class="events-section__section-title events-section__section-title--archive-events custom-underline"><?php the_title(); ?></h2></a>
+      </div>
+
+  
+      <div class="events-section__date events-section__date-archive-events"><p class="events-section__date--inside"><?php 
+        $eventDate = new DateTime(get_field('event_date'));
+        echo $eventDate-> format('M d');
+        ?></p>
+      </div>          
+          <p class="events-section__content-archive-events"><?php echo wp_trim_words(get_the_content(), 18); ?></p>
+    </div>
   </div>
-</div>
 </div>
 
 <?php } ?>

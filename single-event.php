@@ -55,7 +55,7 @@ if($relatedDepartments){
     echo '<ul>';
      foreach($relatedDepartments as $department){ ?>
         
-        <li class="page-links"><a class="page-links__links" href="<?php echo get_the_permalink($department); ?>"><?php echo get_the_title($department); ?></a></li>
+        <li class="page-links"><a class="custom-underline" href="<?php echo get_the_permalink($department); ?>"><?php echo get_the_title($department); ?></a></li>
     
     <?php } 
     echo '</ul>';
