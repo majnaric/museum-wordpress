@@ -38,7 +38,7 @@
 while(have_posts()){
 the_post();?>
 
-<li class="page-links"><a claass="page-links__links" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+<li class="links"><a claass="" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 
 <?php } ?>
 
