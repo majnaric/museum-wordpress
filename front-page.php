@@ -81,7 +81,7 @@
     </div>
 
     <div class="row__4 wrapper events-section row__4-forMedium">
-      <h1 class="events-section__title">EVENTS</h1>
+      <h1 class="page-links page-links--white events-section__title"><a class="custom-underline custom-underline--white custom-underline--title" href="<?php echo site_url('/events'); ?>">EVENTS</a></h1>
 
 
 <?php 
@@ -96,7 +96,7 @@ $homepageEvents->the_post(); ?>
 <div class="events-section__card events-section__card-medium">
 
         <div class="row__12">
-          <h2 class="events-section__section-title page-links"><a href="<?php the_permalink(); ?>" class="custom-underline"><?php the_title(); ?></a></h2>
+          <h2 class="events-section__section-title page-links page-links--white"><a href="<?php the_permalink(); ?>" class="custom-underline custom-underline--white"><?php the_title(); ?></a></h2>
           
           <div class="events-section__date-and-text">
             <p class="events-section__date">Dec. 1</p>          
@@ -106,7 +106,7 @@ $homepageEvents->the_post(); ?>
             } else {
               echo wp_trim_words(get_the_content(), 18);
             }
-             ?> <a href="<?php the_permalink(); ?>">Learn more</a></p>
+             ?> <a class="btn__learn-more" href="<?php the_permalink(); ?>">Learn more</a></p>
           </div>
         </div>
       </div>

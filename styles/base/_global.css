@@ -39,6 +39,7 @@ img {
   font-size: 1.5rem;
   font-weight: 500;
   text-align: center;
+
   &:hover {
     color: #333;
     font-weight: 700;
@@ -68,7 +69,25 @@ img {
   transition: 0.5s ease all;
 }
 
+.page-links--white .custom-underline--white::after {
+  background-color: #fff;
+}
+
 .page-links:hover .custom-underline::after {
   width: 90%;
   transition: 0.3s ease all;
+}
+
+.custom-underline {
+  &--title {
+    font-size: 3rem !important;
+  }
+
+  &--white {
+    color: #fff;
+
+    &:hover {
+      color: white;
+    }
+  }
 }
