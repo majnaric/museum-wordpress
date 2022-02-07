@@ -284,7 +284,7 @@
 
     @mixin atLarge {
       font-size: 3rem;
-      margin-top: 0;
+      top: 0;
     }
   }
 
@@ -295,16 +295,16 @@
     overflow: hidden;
 
     @mixin atSmall {
-      height: 29rem;
+      height: fit-content;
       width: 80%;
     }
 
     @mixin atMedium {
-      height: 32rem;
+      height: fit-content;
     }
 
     @mixin atLarge {
-      height: 15rem;
+      height: fit-content;
       width: 90%;
     }
     /* border-bottom: 1px solid #fff; */
@@ -312,12 +312,12 @@
 
   &__card-medium {
     @mixin atMedium {
-      height: 23rem;
+      height: fit-content;
       padding-top: 2rem;
     }
 
     @mixin atLarge {
-      height: 15rem;
+      height: fit-content;
     }
   }
 
@@ -340,6 +340,15 @@
     @mixin atLarge {
       left: -1rem;
     }
+  }
+
+  &__single-events-title {
+    /* display: block; */
+    height: fit-content;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2rem;
   }
 
   &__date {
@@ -369,13 +378,22 @@
     }
 
     @mixin atLarge {
-      position: relative;
-      top: 1.5rem;
+      position: absolute;
+      top: 2.5rem;
       left: 0;
       margin: 1rem 2rem;
       width: 3rem;
       height: 3rem;
       font-size: 1.3rem;
+    }
+
+    &--inside {
+      width: fit-content;
+      text-align: center;
+      position: absolute;
+      top: -2rem;
+      left: 1px;
+      color: #fff;
     }
   }
 
@@ -387,7 +405,8 @@
     margin: 1rem auto;
     width: 100%;
     float: left;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: 400;
     letter-spacing: 5px;
 
     @mixin atMedium {
@@ -397,7 +416,7 @@
 
     @mixin atLarge {
       position: relative;
-      margin: 1rem auto;
+      margin: 0 auto 2rem auto;
     }
   }
 
@@ -405,7 +424,6 @@
     position: relative;
     float: right;
     height: 3rem;
-    margin-top: 2rem;
     text-align: justify;
     line-height: 1.5rem;
 
@@ -421,9 +439,17 @@
 
     @mixin atLarge {
       position: relative;
-      margin: 0;
-      top: -100px;
+      height: fit-content;
+      top: 1px;
+      margin-top: 0;
+      margin-bottom: 2rem;
+      /* top: -100px; */
       width: 68%;
     }
+  }
+
+  &__content-archive-events {
+    width: 75%;
+    float: right;
   }
 }

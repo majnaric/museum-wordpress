@@ -143,3 +143,15 @@
   background-color: orangered;
   border-radius: 50%;
 } */
+
+.curator-image {
+  width: 200px;
+  height: 460px;
+}
+
+.curator-thumb {
+  width: 330px;
+  height: 480px;
+  display: inline-block;
+  margin-top: 1.5rem;
+}

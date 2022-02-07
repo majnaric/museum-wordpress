@@ -81,44 +81,42 @@
     </div>
 
     <div class="row__4 wrapper events-section row__4-forMedium">
-      <h1 class="events-section__title">EVENTS</h1>
+      <h1 class="page-links page-links--white events-section__title"><a class="custom-underline custom-underline--white custom-underline--title" href="<?php echo site_url('/events'); ?>">EVENTS</a></h1>
 
-      <div class="events-section__card events-section__card-medium">
-            
-        <div class="row__12">
-          <h2 class="events-section__section-title">Sudden Autumn Break</h2>
-          
-          <div class="events-section__date-and-text">
-            <p class="events-section__date">Nov. 12</p>         
-            <p class="events-section__section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at est vel enim luctus volutpat et id sem. Aliquam tristique congue ante vel lacinia. Pellentesque metus sapien, mollis quis sollicitudin eget, feugiat id mauris.</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="events-section__card events-section__card-medium">
+
+<?php 
+$homepageEvents = new WP_Query(array(
+  'posts_per_page' => 3,
+  'post_type' => 'event'
+));
+
+ while($homepageEvents->have_posts()){
+$homepageEvents->the_post(); ?>
+
+<div class="events-section__card events-section__card-medium">
 
         <div class="row__12">
-          <h2 class="events-section__section-title">Last Month's Arrival</h2>
+          <h2 class="events-section__section-title page-links page-links--white"><a href="<?php the_permalink(); ?>" class="custom-underline custom-underline--white"><?php the_title(); ?></a></h2>
           
           <div class="events-section__date-and-text">
             <p class="events-section__date">Dec. 1</p>          
-            <p class="events-section__section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at est vel enim luctus volutpat et id sem. Aliquam tristique congue ante vel lacinia. Pellentesque metus sapien, mollis quis sollicitudin eget, feugiat id mauris.</p>
+            <p class="events-section__section-text"><?php 
+            if (has_excerpt()){ 
+              echo get_the_excerpt();
+            } else {
+              echo wp_trim_words(get_the_content(), 18);
+            }
+             ?> <a class="btn__learn-more" href="<?php the_permalink(); ?>">Learn more</a></p>
           </div>
         </div>
       </div>
-      
-      <div class="events-section__card events-section__card-medium">
 
-        <div class="row__12">
-          <h2 class="events-section__section-title">New Year's Celebration</h2>
-          
-          <div class="events-section__date-and-text">
-            <p class="events-section__date">Dec. 31</p>
-            <p class="events-section__section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at est vel enim luctus volutpat et id sem. Aliquam tristique congue ante vel lacinia. Pellentesque metus sapien, mollis quis sollicitudin eget, feugiat id mauris.</p>
-          </div>
-        </div>
-      </div>    
-    
+<?php
+ }
+?> 
+
+
+
     </div>
   </div>
 

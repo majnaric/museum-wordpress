@@ -33,7 +33,7 @@
     }
 
     @mixin atLarge {
-      font-weight: 300;
+      font-weight: 400;
     }
   }
   a:hover {
