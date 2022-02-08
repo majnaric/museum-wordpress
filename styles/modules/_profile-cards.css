@@ -144,14 +144,22 @@
   border-radius: 50%;
 } */
 
-.curator-image {
-  width: 200px;
-  height: 460px;
-}
+.curator {
+  &-image {
+    width: 200px;
+    height: 250px;
+    /* opacity: 1; */
 
-.curator-thumb {
-  width: 330px;
-  height: 480px;
-  display: inline-block;
-  margin-top: 1.5rem;
+    /* &:hover {
+      opacity: 0.8;
+      transition: opacity 0.2s ease-in-out;
+    } */
+  }
+
+  &-thumb {
+    width: 330px;
+    height: 480px;
+    display: inline-block;
+    margin-top: 1.5rem;
+  }
 }

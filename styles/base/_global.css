@@ -21,6 +21,13 @@ img {
   width: fit-content;
   color: $mainGrey;
 
+  &--single-curator {
+    background-color: rgba(109, 11, 11, 0.712);
+    position: absolute;
+    width: 200px;
+    top: 14rem;
+  }
+
   /* color: $mainGrey; */
 
   & a {
@@ -81,6 +88,9 @@ img {
 .custom-underline {
   &--title {
     font-size: 3rem !important;
+    &-medium {
+      font-size: 2rem !important;
+    }
   }
 
   &--white {

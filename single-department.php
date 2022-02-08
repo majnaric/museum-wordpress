@@ -66,13 +66,13 @@ $relatedCurators = new WP_Query(array(
 if($relatedCurators->have_posts()){
   echo '<hr>';
   echo '<h2>Curator(s)</h2>';
-  echo '<ul>';
+  echo '<ul class="department">';
 while($relatedCurators->have_posts()){
 $relatedCurators->the_post(); ?>
 <li class="page-links">
   <a href="<?php the_permalink(); ?>">
-  <div class="page-links">
-  <span class="custom-underline"><?php the_title(); ?></span>
+  <div class="page-links--single-curator">
+  <span class="custom-underline--single-curator custom-underline--white"><?php the_title(); ?></span>
   </div>
   <img class="curator-image" src="<?php the_post_thumbnail_url('curatorLandscape'); ?>" alt="">
 </a>
@@ -118,15 +118,15 @@ $homepageEvents->the_post(); ?>
 <div class="events-section__card events-section__card-medium">
 
 <div class="row__12">
-<a class="events-section__section-title" href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+<a class="events-section__section-title page-links" href="<?php the_permalink(); ?>"><h2 class="custom-underline custom-underline--title-medium"><?php the_title(); ?></h2></a>
   
   <div class="events-section__date-and-text">
-  <div class="events-section__date"><p><?php 
+  <div class="events-section__date events-section__date-department"><p><?php 
     $eventDate = new DateTime(get_field('event_date'));
     echo $eventDate-> format('M d');
     ?></p></div>
               
-    <p class="events-section__section-text"><?php if(has_excerpt()){
+    <p class="events-section__section-text events-section__section-text-department"><?php if(has_excerpt()){
       echo get_the_excerpt();
     } else {
       echo wp_trim_words(get_the_content(), 18);

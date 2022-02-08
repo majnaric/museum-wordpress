@@ -357,7 +357,6 @@
     background-color: $mainGrey;
     border-radius: 50%;
     float: left;
-
     height: 3rem;
     padding: 15px;
     font-size: 1.3rem;
@@ -385,6 +384,19 @@
       width: 3rem;
       height: 3rem;
       font-size: 1.3rem;
+    }
+    & p {
+      width: fit-content;
+      text-align: center;
+      color: white;
+      position: absolute;
+      top: -2rem;
+      left: -0.1rem;
+    }
+
+    &-department {
+      top: 0.5rem;
+      left: 4rem;
     }
 
     &--inside {
@@ -446,10 +458,20 @@
       /* top: -100px; */
       width: 68%;
     }
+    &-department {
+      text-align: center;
+      width: fit-content;
+      left: -11rem;
+      top: -2rem;
+    }
   }
 
   &__content-archive-events {
     width: 75%;
     float: right;
   }
+}
+
+.department {
+  padding: 0;
 }
