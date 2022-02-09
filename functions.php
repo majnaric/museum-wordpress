@@ -15,6 +15,7 @@ function museum_features(){
     add_theme_support('post-thumbnails');
     add_image_size('curatorLandscape', 400, 260, true);
     add_image_size('curatorPortrait', 480, 650, true);
+    add_image_size('pageBanner', 200, 1200, true);
 }
 
 add_action('after_setup_theme', 'museum_features');

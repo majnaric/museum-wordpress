@@ -32,10 +32,29 @@
 
 <div class="exhibition-page--expo__description post_item">
 <?php
+
+
+$today = date('Ymd');
+$homepageEvents = new WP_Query(array(
+  'posts_per_page' => 3,
+  'post_type' => 'event',
+  'meta_key' => 'event_date',
+  'orderby' => 'meta_value_num',
+  'order' => 'ASC',
+  'meta_query' => array(
+    array(
+      'key' => 'event_date',
+      'compare' => '>=',
+      'value' => $today,
+      'type' => 'numeric'
+    )
+  )
+));
+
+
 while(have_posts()){
-the_post();?>
-
-
+the_post();
+?>
 <div class="events-section__card events-section__card-medium events-section__card-medium--archive-events">
 
   <div class="row__12">
@@ -48,7 +67,7 @@ the_post();?>
   
       <div class="events-section__date events-section__date-archive-events"><p class="events-section__date--inside"><?php 
         $eventDate = new DateTime(get_field('event_date'));
-        echo $eventDate-> format('M d');
+        echo $eventDate-> format('d M');
         ?></p>
       </div>          
           <p class="events-section__content-archive-events"><?php echo wp_trim_words(get_the_content(), 18); ?></p>

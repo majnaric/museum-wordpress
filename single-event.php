@@ -52,7 +52,7 @@ $relatedDepartments = get_field('related_departments');
 if($relatedDepartments){
     echo '<hr>';
     echo '<h2>Department(s)</h2>';
-    echo '<ul>';
+    echo '<ul class="department">';
      foreach($relatedDepartments as $department){ ?>
         
         <li class="page-links"><a class="custom-underline" href="<?php echo get_the_permalink($department); ?>"><?php echo get_the_title($department); ?></a></li>

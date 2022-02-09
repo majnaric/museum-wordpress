@@ -85,9 +85,21 @@
 
 
 <?php 
+$today = date('Ymd');
 $homepageEvents = new WP_Query(array(
   'posts_per_page' => 3,
-  'post_type' => 'event'
+  'post_type' => 'event',
+  'meta_key' => 'event_date',
+  'orderby' => 'meta_value_num',
+  'order' => 'ASC',
+  'meta_query' => array(
+    array(
+      'key' => 'event_date',
+      'compare' => '>=',
+      'value' => $today,
+      'type' => 'numeric'
+    )
+  )
 ));
 
  while($homepageEvents->have_posts()){
@@ -99,7 +111,10 @@ $homepageEvents->the_post(); ?>
           <h2 class="events-section__section-title page-links page-links--white"><a href="<?php the_permalink(); ?>" class="custom-underline custom-underline--white"><?php the_title(); ?></a></h2>
           
           <div class="events-section__date-and-text">
-            <p class="events-section__date">Dec. 1</p>          
+            <p class="events-section__date"><?php
+             $eventDate = new DateTime(get_field('event_date'));
+             echo $eventDate->format('d M') 
+            ?></p>          
             <p class="events-section__section-text"><?php 
             if (has_excerpt()){ 
               echo get_the_excerpt();
