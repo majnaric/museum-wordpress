@@ -29,17 +29,56 @@
   <div class="wrapper news-and-blog">    
     <div class="page-section row__6 page-section__news row__6-forMedium">
       <div class="wrapper">
-        <h1 class="events-section__title page-section__title">EXHIBITIONS</h1>
+      <h1 class="page-links page-links--white events-section__title"><a class="custom-underline custom-underline--white custom-underline--title" href="<?php echo site_url('/exhibition'); ?>">EXHIBITION</a></h1>
 
-        <div class="events-section__card"> 
+
+        <?php 
+$today = date('Ymd');
+$homepageExhibition = new WP_Query(array(
+  'posts_per_page' => 3,
+  'post_type' => 'exhibition',
+));
+
+ while($homepageExhibition->have_posts()){
+$homepageExhibition->the_post(); ?>
+
+<div class="events-section__card"> 
+    
+          <h2 class="page-section__news-title page-links page-links--white"><a href="<?php the_permalink(); ?>" class="custom-underline custom-underline--white"><?php the_title(); ?></a></h2>
+
+          <div class="row__8">
+            <div class="page-section__section-card">
+              <p class="page-section__section-text"><?php 
+            if (has_excerpt()){ 
+              echo get_the_excerpt();
+            } else {
+              echo wp_trim_words(get_the_content(), 18);
+            }
+             ?> <a class="btn__learn-more" href="<?php the_permalink(); ?>">Learn more</a></p>
+          <!-- <div class="bottom-border"></div> -->
+            </div>
+          </div>
+          <div class="row__4 page-section__expo-picture">
+            <a href="<?php the_permalink(); ?>"><img src="<?php $pageBannerImage = get_field('page_banner_background_image'); echo $pageBannerImage['sizes']['exhibitionImage'] ?>" alt="The Willamette Meteorite"><p class="page-section__expo-picture--cite">Image source: <cite>https://www.amnh.org</cite></a>
+          </div>
+        </div>
+
+
+<?php } 
+
+wp_reset_postdata();
+
+?>
+
+
+        <!-- <div class="events-section__card"> 
     
           <a href="exhibition.html"><h2 class="page-section__news-title">Meteors</h2></a>
 
           <div class="row__8">
             <div class="page-section__section-card">
-              <p class="page-section__section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at est vel enim luctus volutpat et id sem. Aliquam tristique congue ante vel lacinia. Pellentesque metus sapien, mollis quis sollicitudin eget, feugiat id mauris.</p>
-          <!-- <div class="bottom-border"></div> -->
-            </div>
+              <p class="page-section__section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at est vel enim luctus volutpat et id sem. Aliquam tristique congue ante vel lacinia. Pellentesque metus sapien, mollis quis sollicitudin eget, feugiat id mauris.</p> -->
+            <!-- </div>
           </div>
           <div class="row__4 page-section__expo-picture">
             <a href="https://www.amnh.org/exhibitions/permanent/the-universe/planets/planetary-impacts/willamette-meteorite"><img src="https://www.amnh.org/var/ezflow_site/storage/images/media/amnh/images/calendar/live-events/live-events-june-2020/willamette-meteorite-hall-universe-2460-1384/4942716-1-eng-US/willamette-meteorite-hall-universe-2460-1384_wideexact_1230.jpg" alt="The Willamette Meteorite"><p class="page-section__expo-picture--cite">Image source: <cite>https://www.amnh.org</cite></a>
@@ -54,8 +93,7 @@
           <div class="row__8">
             <div class="page-section__section-card">
               <p class="page-section__section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at est vel enim luctus volutpat et id sem. Aliquam tristique congue ante vel lacinia. Pellentesque metus sapien, mollis quis sollicitudin eget, feugiat id mauris.</p>
-          <!-- <div class="bottom-border"></div> -->
-            </div>
+                    </div>
           </div>
           <div class="row__4 page-section__expo-picture">
             <a href="https://www.atlasobscura.com/articles/last-of-their-kind-photographs-of-the-extinct-taxidermy-in-paris"><img src="https://assets.atlasobscura.com/article_images/800x/9411/image.jpg" alt="Sumatran Tiger - The Extinct Taxydermy in Paris"> <p class="page-section__expo-picture--cite">Image source: <cite>https://www.atlasobscura.com</cite></p></a>
@@ -69,17 +107,15 @@
           <div class="row__8">
             <div class="page-section__section-card">
               <p class="page-section__section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at est vel enim luctus volutpat et id sem. Aliquam tristique congue ante vel lacinia. Pellentesque metus sapien, mollis quis sollicitudin eget, feugiat id mauris.</p>
-          <!-- <div class="bottom-border"></div> -->
-            </div>
+                    </div>
           </div>
           <div class="row__4 page-section__expo-picture">
             <a href="https://www.nhm.ac.uk/visit/galleries-and-museum-map/dinosaurs.html"><img src="https://www.nhm.ac.uk/content/dam/nhmwww/visit/Galleriesandfloorplans/dinosaur-skull-two-column.jpg" alt="The gigantic armoured dinosaur Scolosaurus"><p class="page-section__expo-picture--cite">Image source: <cite>https://www.nhm.ac.uk</cite></p></a>
           </div>
         </div>
-
+ -->
       </div>
     </div>
-
     <div class="row__4 wrapper events-section row__4-forMedium">
       <h1 class="page-links page-links--white events-section__title"><a class="custom-underline custom-underline--white custom-underline--title" href="<?php echo site_url('/events'); ?>">EVENTS</a></h1>
 
