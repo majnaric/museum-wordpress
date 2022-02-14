@@ -1,14 +1,18 @@
 class ImageGallery{
     constructor(){
         let div = document.querySelectorAll('.exhibition-page--image-container');
-        let pics = ["assets/images/meteors-exhibition/1a.jpg", 
-        "assets/images/meteors-exhibition/2a.jpg",
-        "assets/images/meteors-exhibition/3a.jpg",
-        "assets/images/meteors-exhibition/4a.jpg",
-        "assets/images/meteors-exhibition/5a.jpg",
-        "assets/images/meteors-exhibition/6a.jpg",
-         "assets/images/meteors-exhibition/7a.jpg",
-         "assets/images/meteors-exhibition/8a.jpg"];
+
+// NOTE --- INSTEAD OF LARGE IMAGE SHOWING, CODE A MODAL FOR AN IMAGE;
+
+
+        // let pics = ["assets/images/meteors-exhibition/1a.jpg", 
+        // "assets/images/meteors-exhibition/2a.jpg",
+        // "assets/images/meteors-exhibition/3a.jpg",
+        // "assets/images/meteors-exhibition/4a.jpg",
+        // "assets/images/meteors-exhibition/5a.jpg",
+        // "assets/images/meteors-exhibition/6a.jpg",
+        //  "assets/images/meteors-exhibition/7a.jpg",
+        //  "assets/images/meteors-exhibition/8a.jpg"];
         let hasClass = false;
     
     

@@ -12,18 +12,33 @@
   }
 }
 
-.exhibition-page__title {
-  text-align: center;
-  font-size: 2rem;
+.exhibition-page {
+  &__title {
+    text-align: center;
+    font-size: 2rem;
 
-  @mixin atSmall {
+    @mixin atSmall {
+      position: relative;
+      top: -27rem;
+      font-size: 1.7rem;
+    }
+
+    @mixin atLarge {
+      top: 0;
+    }
+  }
+  &--banner-image {
     position: relative;
-    top: -27rem;
-    font-size: 1.7rem;
+    left: 40rem;
+    width: 200px;
   }
 
-  @mixin atLarge {
-    top: 0;
+  &--exhibition-content {
+    width: 60%;
+    display: inline-block;
+    position: relative;
+    left: -17rem;
+    color: #333;
   }
 }
 .exhibition-page--expo__title {
@@ -64,15 +79,20 @@
     margin-top: 0;
   }
 }
-.exhibition-page--expo__description p {
-  padding: 1.5rem;
-  line-height: 1.7rem;
+.exhibition-page--expo__content {
+  width: 46%;
+  margin: 0;
+  display: inline-block;
+  position: absolute;
+  /* top: 1.5rem; */
+  margin: 2rem;
+  line-height: 2;
+  color: #fff;
   text-align: justify;
-  font-size: 1.3rem;
 }
 
 .exhibition-page--expo__photos {
-  position: absolute;
+  position: relative;
   right: 0;
   display: flex;
   justify-content: space-around;
@@ -84,6 +104,9 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
+  left: 46rem;
+  top: 2.5rem;
 }
 
 .exhibition-page--image-container {

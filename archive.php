@@ -1,20 +1,10 @@
-<?php get_header();?>
+<?php get_header();
+pageBanner(array(
+  'title' => get_the_archive_title(),
+  'subtitle' => get_the_archive_description()
+));
+?>
 
-<div class="large-hero-wrap">
-        <div class="exhibitions--large-hero">
-            <!-- <source class="large-hero" srcset="assets/images/hero-image-large.jpg" media="(min-width: 1380px)">
-            <source class="large-hero" srcset="assets/images/hero-image-medium.jpg" media="(min-width: 990px)">
-            <source class="large-hero" srcset="assets/images/hero-image-small.jpg" media="(min-width: 640px)">
-            <img class="large-hero" srcset="assets/images/hero-image-smaller.jpg" alt="Coastal view of oceans and mountains" class="large-hero__image"> -->
-            </div>
-    </div>
-    <div class="exhibition-page__title">
-    <h1><?php the_archive_title(); ?></h1>
-</div>
-
-<div class="wrapper news-and-blog exhibition-page__news-and-blog">
-
-<div class="exhibition-page--expo__title"><p><?php the_archive_description(); ?></p></div>
 
 <div class="exhibition-page--expo__description">
 <?php

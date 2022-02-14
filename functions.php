@@ -1,5 +1,57 @@
 <?php
 
+function pageBanner($args = NULL){
+
+
+    if(!$args['title']){
+        $args['title'] = get_the_title();
+    }
+
+    if(!$args['subtitle']){
+        $args['subtitle'] = get_field('page_banner_subtitle');
+    }
+
+    if (!$args['photo']) {
+        if(get_field('page_banner_background_image')  AND !is_archive() AND !is_home()){
+            $args['photo'] = get_field('page_banner_background_image')['sizes']['pageBanner'];
+        } else {
+            $args['photo'] = get_theme_file_uri('/images/hero-image-large.jpg');
+        }
+    }
+    ?>
+
+<div class="large-hero-wrap">
+        <div class="exhibitions--large-hero" style="background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 25%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(255, 255, 255, 0.3) 75%,
+      rgba(255, 255, 255, 1) 100%
+    ),
+     url(<?php echo $args['photo']; ?>);
+     background-repeat: no-repeat;
+    background-size: cover;
+    height: 6rem;">
+            <!-- <source class="large-hero" srcset="assets/images/hero-image-large.jpg" media="(min-width: 1380px)">
+            <source class="large-hero" srcset="assets/images/hero-image-medium.jpg" media="(min-width: 990px)">
+            <source class="large-hero" srcset="assets/images/hero-image-small.jpg" media="(min-width: 640px)">
+            <img class="large-hero" srcset="assets/images/hero-image-smaller.jpg" alt="Coastal view of oceans and mountains" class="large-hero__image"> -->
+            </div>
+    </div>
+
+    <div class="exhibition-page__title">
+    <h1><?php echo $args['title']; ?></h1>
+</div>
+
+<div class="wrapper news-and-blog exhibition-page__news-and-blog">
+
+<div class="exhibition-page--expo__title"><p><?php echo $args['subtitle']; ?></p></div>
+
+    <?php
+}
+
+
 function museum_files(){
     wp_enqueue_script('main-museum-js', get_theme_file_uri('/bundled.js'), NULL, '1.0', true);
     wp_enqueue_script('main-museum-js', get_theme_file_uri('/scripts/App.js'));
@@ -15,8 +67,9 @@ function museum_features(){
     add_theme_support('post-thumbnails');
     add_image_size('curatorLandscape', 400, 260, true);
     add_image_size('curatorPortrait', 480, 650, true);
-    add_image_size('pageBanner', 200, 1200, true);
+    add_image_size('pageBanner', 1200, 200, true);
     add_image_size('exhibitionImage', 200, 200, true);
+    add_image_size('programImage', 1000, 500, true);
 }
 
 add_action('after_setup_theme', 'museum_features');

@@ -78,3 +78,15 @@
 .btn:focus {
   outline: none;
 }
+
+.corouselImageTextOver {
+  position: relative;
+  top: 15rem;
+  left: -35rem;
+  z-index: 1000;
+  background-color: rgba(51, 51, 51, 0.158);
+  color: #fff;
+  width: fit-content;
+  height: fit-content;
+  float: left;
+}

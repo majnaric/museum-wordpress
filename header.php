@@ -16,12 +16,22 @@
             <a href="#" class="btn open-modal">Get In Touch</a>
           </div> -->
           <nav class="primary-nav primary-nav--pull-right">
-            <ul>
-              <li <?php if(is_page('/home')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url() ?>">Home</a></li>
+            <ul class="logo--positioned-left">
+              <li <?php if(is_page('home')) echo 'class="logo--is-not-visible"' ?>><a href="<?php echo site_url() ?>">IMAGINARY MUSEUM</a></li>
+            </ul>
+            <ul class="navBar--positioned-right">
+              <li <?php 
+              if(is_page('home')){ 
+                echo 'class="current-menu-item"';
+              }else{ 
+                echo 'class="logo--is-not-visible"';
+                } ?>>
+              <a href="<?php echo site_url() ?>">Home</a>
+            </li>
               <li <?php if(is_page('about-us')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/about-us') ?>">About</a></li>
               <li <?php if(get_post_type() == 'event') echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/events') ?>">Events</a></li>
               <li <?php if(get_post_type() == 'exhibition') echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/exhibition') ?>">Exhibitions</a></li>
-              <li if(get_post_type() == 'department') echo 'class="current-menu-item"' ?><a href="<?php echo site_url('/departments') ?>">Departments</a></li>
+              <li <?php if(get_post_type() == 'department') echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/departments') ?>">Departments</a></li>
               <li <?php if(is_page('privacy-policy')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/privacy-policy') ?>">Privacy Policy</a></li>
               <li <?php if(get_post_type() == 'post') echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/blog') ?>">Blog</a></li>
             </ul>

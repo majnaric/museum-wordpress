@@ -63,3 +63,25 @@
     }
   }
 }
+
+.logo {
+  &--positioned-left {
+    width: fit-content;
+    height: fit-content;
+    color: #333;
+    font-size: 2rem;
+    font-weight: 700;
+    position: relative;
+    left: -27rem;
+    top: 0.3rem;
+    display: inline-block;
+  }
+  &--is-not-visible {
+    visibility: hidden;
+  }
+}
+
+.navBar--positioned-right {
+  position: relative;
+  top: -2.7rem;
+}

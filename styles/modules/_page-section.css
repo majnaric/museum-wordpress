@@ -400,11 +400,6 @@
     }
 
     &--inside {
-      width: fit-content;
-      text-align: center;
-      position: absolute;
-      top: -2rem;
-      left: 1px;
       color: #fff;
     }
   }
@@ -474,4 +469,9 @@
 
 .department {
   padding: 0;
+}
+
+.generic-content {
+  margin: 2rem;
+  text-align: justify;
 }

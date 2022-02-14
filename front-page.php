@@ -54,7 +54,7 @@ $homepageExhibition->the_post(); ?>
             } else {
               echo wp_trim_words(get_the_content(), 18);
             }
-             ?> <a class="btn__learn-more" href="<?php the_permalink(); ?>">Learn more</a></p>
+             ?> <a class="btn__learn-more--light" href="<?php the_permalink(); ?>">Learn more</a></p>
           <!-- <div class="bottom-border"></div> -->
             </div>
           </div>
@@ -71,49 +71,6 @@ wp_reset_postdata();
 ?>
 
 
-        <!-- <div class="events-section__card"> 
-    
-          <a href="exhibition.html"><h2 class="page-section__news-title">Meteors</h2></a>
-
-          <div class="row__8">
-            <div class="page-section__section-card">
-              <p class="page-section__section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at est vel enim luctus volutpat et id sem. Aliquam tristique congue ante vel lacinia. Pellentesque metus sapien, mollis quis sollicitudin eget, feugiat id mauris.</p> -->
-            <!-- </div>
-          </div>
-          <div class="row__4 page-section__expo-picture">
-            <a href="https://www.amnh.org/exhibitions/permanent/the-universe/planets/planetary-impacts/willamette-meteorite"><img src="https://www.amnh.org/var/ezflow_site/storage/images/media/amnh/images/calendar/live-events/live-events-june-2020/willamette-meteorite-hall-universe-2460-1384/4942716-1-eng-US/willamette-meteorite-hall-universe-2460-1384_wideexact_1230.jpg" alt="The Willamette Meteorite"><p class="page-section__expo-picture--cite">Image source: <cite>https://www.amnh.org</cite></a>
-          </div>
-        </div>
-
-        
-        <div class="events-section__card"> 
-    
-          <h2 class="page-section__news-title">Extinct Animals</h2>
-
-          <div class="row__8">
-            <div class="page-section__section-card">
-              <p class="page-section__section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at est vel enim luctus volutpat et id sem. Aliquam tristique congue ante vel lacinia. Pellentesque metus sapien, mollis quis sollicitudin eget, feugiat id mauris.</p>
-                    </div>
-          </div>
-          <div class="row__4 page-section__expo-picture">
-            <a href="https://www.atlasobscura.com/articles/last-of-their-kind-photographs-of-the-extinct-taxidermy-in-paris"><img src="https://assets.atlasobscura.com/article_images/800x/9411/image.jpg" alt="Sumatran Tiger - The Extinct Taxydermy in Paris"> <p class="page-section__expo-picture--cite">Image source: <cite>https://www.atlasobscura.com</cite></p></a>
-          </div>
-        </div>
-
-        <div class="events-section__card"> 
-    
-          <h2 class="page-section__news-title">Dinosaurs</h2>
-
-          <div class="row__8">
-            <div class="page-section__section-card">
-              <p class="page-section__section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at est vel enim luctus volutpat et id sem. Aliquam tristique congue ante vel lacinia. Pellentesque metus sapien, mollis quis sollicitudin eget, feugiat id mauris.</p>
-                    </div>
-          </div>
-          <div class="row__4 page-section__expo-picture">
-            <a href="https://www.nhm.ac.uk/visit/galleries-and-museum-map/dinosaurs.html"><img src="https://www.nhm.ac.uk/content/dam/nhmwww/visit/Galleriesandfloorplans/dinosaur-skull-two-column.jpg" alt="The gigantic armoured dinosaur Scolosaurus"><p class="page-section__expo-picture--cite">Image source: <cite>https://www.nhm.ac.uk</cite></p></a>
-          </div>
-        </div>
- -->
       </div>
     </div>
     <div class="row__4 wrapper events-section row__4-forMedium">
@@ -157,7 +114,7 @@ $homepageEvents->the_post(); ?>
             } else {
               echo wp_trim_words(get_the_content(), 18);
             }
-             ?> <a class="btn__learn-more" href="<?php the_permalink(); ?>">Learn more</a></p>
+             ?> <a class="btn__learn-more--light" href="<?php the_permalink(); ?>">Learn more</a></p>
           </div>
         </div>
       </div>
@@ -178,22 +135,27 @@ $homepageEvents->the_post(); ?>
 <div class="carouselBody">
 <div class="carousel swiper-container">
   <div class="carousel-image-container swiper-wrapper" id="images">
+    
     <img class="carouselIMG swiper-slide"
-      src="<?php echo get_theme_file_uri('/images/image-slider/image-slider-1a.jpeg');?>"
+      src="<?php echo get_theme_file_uri('/images/image-slider/artAndCraft.jpg');?>"
       alt="first-image"
     />
+   
     <img class="carouselIMG swiper-slide"
-      src="<?php echo get_theme_file_uri('/images/image-slider/image-slider-2a.jpeg');?>"
+      src="<?php echo get_theme_file_uri('/images/image-slider/groupVisits.jpg');?>"
       alt="second-image"
     />
+
     <img class="carouselIMG swiper-slide"
-      src="<?php echo get_theme_file_uri('/images/image-slider/image-slider-3a.jpeg'); ?>"
+      src="<?php echo get_theme_file_uri('/images/image-slider/maskarade.jpg'); ?>"
       alt="third-image"
     />
+
     <img class="carouselIMG swiper-slide"
-      src="<?php echo get_theme_file_uri('/images/image-slider/image-slider-4a.jpeg'); ?>"
+      src="<?php echo get_theme_file_uri('/images/image-slider/virtualTours.jpg'); ?>"
       alt="fourth-image"
     />
+
   </div>
   <div class="buttons-container">
     <button id="left" class="carouselBTN swiper-button-prev">Back</button>
@@ -209,7 +171,74 @@ $homepageEvents->the_post(); ?>
 <h2 class="profile-cards-section__title">Museum Curators</h2>
 <div class="profile-cards-section">
 
-  <div class="profile-cards-section__cards">
+
+
+<div class="first hero">
+  <img class="hero-profile-img" src="<?php echo get_theme_file_uri('/images/department-images/art-department.jpg');?>" alt="">
+  <div class="hero-description-bk"></div>
+  <div class="hero-logo">
+    <img src="<?php echo get_theme_file_uri('/images/profile-cards/profile-1.jpeg');?>" alt="">
+  </div>
+  <div class="hero-description">
+      <h2>Goran Majnarić</h2>
+    <p>The best (and only) Art Curator in the department</p>
+  </div>
+  
+  <div class="hero-btn">
+    <a href="#">Learn More</a>
+  </div>
+</div>
+
+<div class="first hero">
+  <img class="hero-profile-img" src="<?php echo get_theme_file_uri('/images/department-images/natural-history-department.jpg');?>" alt="">
+  <div class="hero-description-bk"></div>
+  <div class="hero-logo">
+    <img src="<?php echo get_theme_file_uri('/images/profile-cards/profile-2.jpeg');?>" alt="">
+  </div>
+  <div class="hero-description">
+      <h2>Slađana Aleksić</h2>
+    <p>The head Curator of the Natural-history Department</p>
+  </div>
+  
+  <div class="hero-btn">
+    <a href="#">Learn More</a>
+  </div>
+</div>
+
+<div class="first hero">
+  <img class="hero-profile-img" src="<?php echo get_theme_file_uri('/images/department-images/ethnology-department.jpg');?>" alt="">
+  <div class="hero-description-bk"></div>
+  <div class="hero-logo">
+    <img src="<?php echo get_theme_file_uri('/images/profile-cards/profile-3.jpeg');?>" alt="">
+  </div>
+  <div class="hero-description">
+      <h2>Paulina Vukobratović</h2>
+    <p>Curator in the Ethnology Department</p>
+  </div>
+  
+  <div class="hero-btn">
+    <a href="#">Learn More</a>
+  </div>
+</div>
+
+<div class="first hero">
+  <img class="hero-profile-img" src="<?php echo get_theme_file_uri('/images/department-images/history-department.jpg');?>" alt="">
+  <div class="hero-description-bk"></div>
+  <div class="hero-logo">
+    <img src="<?php echo get_theme_file_uri('/images/profile-cards/profile-4.jpeg');?>" alt="">
+  </div>
+  <div class="hero-description">
+      <h2>Novica Vukobratović</h2>
+    <p>Our History Department Curator</p>
+  </div>
+  
+  <div class="hero-btn">
+    <a href="#">Learn More</a>
+  </div>
+</div>
+
+
+  <!-- <div class="profile-cards-section__cards">
     <div class="profile-cards-section__upper-section profile-cards-section__upper-sectionOne">
       <div class="profile-cards-section__image">
         <img src="<?php echo get_theme_file_uri('/images/profile-cards/profile-1.jpeg');?>" alt="" >
@@ -227,12 +256,12 @@ $homepageEvents->the_post(); ?>
         <i class="far fa-envelope social-network__icon profile-cards-section__icon"></i>
       </div>
     </div>
-  </div>
+  </div> -->
 
 
 
   
-  <div class="profile-cards-section__cards">
+  <!-- <div class="profile-cards-section__cards">
     <div class="profile-cards-section__upper-section profile-cards-section__upper-sectionTwo">
       <div class="profile-cards-section__image">
         <img src="<?php echo get_theme_file_uri('/images/profile-cards/profile-2.jpeg'); ?>" alt="" >
@@ -293,7 +322,7 @@ $homepageEvents->the_post(); ?>
       <i class="fab fa-instagram social-network__icon profile-cards-section__icon"></i>
       <i class="far fa-envelope social-network__icon profile-cards-section__icon"></i>
     </div>
-  </div>
+  </div> -->
 
 </div>
   
