@@ -344,11 +344,12 @@
 
   &__single-events-title {
     /* display: block; */
-    height: fit-content;
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+    margin-right: 2rem;
     padding-bottom: 2rem;
+    height: fit-content;
+    width: 90%;
+    text-align: center;
+    float: right;
   }
 
   &__date {
@@ -379,7 +380,7 @@
     @mixin atLarge {
       position: absolute;
       top: 2.5rem;
-      left: 0;
+      left: 2rem;
       margin: 1rem 2rem;
       width: 3rem;
       height: 3rem;
@@ -423,7 +424,8 @@
 
     @mixin atLarge {
       position: relative;
-      margin: 0 auto 2rem auto;
+      left: 7rem;
+      margin-bottom: 2rem;
     }
   }
 
