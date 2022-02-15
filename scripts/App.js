@@ -4,9 +4,11 @@ import StickyHeader from './modules/StickyHeader'
 import ImageGallery from './modules/ImageGallery'
 import ImageSlider from './modules/ImageSlider'
 import Modal from './modules/Modal'
+import Search from './modules/search'
 
 
-new Modal()
+new Modal();
+const search = new Search();
 let imageGallery = new ImageGallery();
 let imageSlider = new ImageSlider();
 

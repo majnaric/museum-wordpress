@@ -1,0 +1,7 @@
+.search-overlay {
+  display: none;
+
+  &--active {
+    display: block;
+  }
+}

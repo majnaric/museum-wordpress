@@ -29,6 +29,11 @@
 </footer>
 
 
+<div class="search-overlay">
+  Hello123
+</div>
+
+
 <?php wp_footer(); ?>
 </body>
 </html>
