@@ -238,100 +238,12 @@ $homepageEvents->the_post(); ?>
 </div>
 
 
-  <!-- <div class="profile-cards-section__cards">
-    <div class="profile-cards-section__upper-section profile-cards-section__upper-sectionOne">
-      <div class="profile-cards-section__image">
-        <img src="<?php echo get_theme_file_uri('/images/profile-cards/profile-1.jpeg');?>" alt="" >
-      </div>
-    </div>
-
-    <div class="profile-cards-section__lower-section">
-      <p class="profile-cards-section__lower-section--name">Goran Majnaric</p>
-      <p class="profile-cards-section__lower-section--profile">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-      
-      <div class="profile-cards-section__social">
-        <a href="https://www.facebook.com/"><i class="fab fa-facebook social-network__icon profile-cards-section__icon"></i></a>
-        <i class="fab fa-twitter social-network__icon profile-cards-section__icon"></i>
-        <i class="fab fa-instagram social-network__icon profile-cards-section__icon"></i>
-        <i class="far fa-envelope social-network__icon profile-cards-section__icon"></i>
-      </div>
-    </div>
-  </div> -->
-
-
-
-  
-  <!-- <div class="profile-cards-section__cards">
-    <div class="profile-cards-section__upper-section profile-cards-section__upper-sectionTwo">
-      <div class="profile-cards-section__image">
-        <img src="<?php echo get_theme_file_uri('/images/profile-cards/profile-2.jpeg'); ?>" alt="" >
-      </div>
-    </div>
-
-    <div class="profile-cards-section__lower-section">
-      <p class="profile-cards-section__lower-section--name">Slađana Aleksić</p>
-      <p class="profile-cards-section__lower-section--profile">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-      
-      <div class="profile-cards-section__social">
-        <a href="https://www.facebook.com/"><i class="fab fa-facebook social-network__icon profile-cards-section__icon"></i></a>
-        <i class="fab fa-twitter social-network__icon profile-cards-section__icon"></i>
-        <i class="fab fa-instagram social-network__icon profile-cards-section__icon"></i>
-        <i class="far fa-envelope social-network__icon profile-cards-section__icon"></i>
-      </div>
-    </div>
-
-</div>
-
-
-<div class="profile-cards-section__cards">
-  <div class="profile-cards-section__upper-section profile-cards-section__upper-sectionThree">
-    <div class="profile-cards-section__image">
-      <img src="<?php echo get_theme_file_uri('/images/profile-cards/profile-3.jpeg'); ?>" alt="" >
-    </div>
-  </div>
-
-  <div class="profile-cards-section__lower-section">
-    <p class="profile-cards-section__lower-section--name">Paulina Vukobratović</p>
-    <p class="profile-cards-section__lower-section--profile">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-    
-    <div class="profile-cards-section__social">
-      <a href="https://www.facebook.com/"><i class="fab fa-facebook social-network__icon profile-cards-section__icon"></i></a>
-      <i class="fab fa-twitter social-network__icon profile-cards-section__icon"></i>
-      <i class="fab fa-instagram social-network__icon profile-cards-section__icon"></i>
-      <i class="far fa-envelope social-network__icon profile-cards-section__icon"></i>
-    </div>
-  </div>
-
-</div>
-
-
-<div class="profile-cards-section__cards">
-  <div class="profile-cards-section__upper-section profile-cards-section__upper-sectionFour">
-    <div class="profile-cards-section__image">
-      <img src="<?php echo get_theme_file_uri('/images/profile-cards/profile-4.jpeg'); ?>" alt="" >
-    </div>
-  </div>
-
-  <div class="profile-cards-section__lower-section">
-    <p class="profile-cards-section__lower-section--name">Novica Vukobratović</p>
-    <p class="profile-cards-section__lower-section--profile">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-    
-    <div class="profile-cards-section__social">
-      <a href="https://www.facebook.com/"><i class="fab fa-facebook social-network__icon profile-cards-section__icon"></i></a>
-      <i class="fab fa-twitter social-network__icon profile-cards-section__icon"></i>
-      <i class="fab fa-instagram social-network__icon profile-cards-section__icon"></i>
-      <i class="far fa-envelope social-network__icon profile-cards-section__icon"></i>
-    </div>
-  </div> -->
 
 </div>
   
 
-  <!-- <div class="profile-cards-section__cards">
-    <div class="profile-cards-section__upper-section">
-      <!-- <img src="/app/assets/images/profile-cards/profile-1.jfif" alt="" class="profile-cards-section__profile-image"> -->
-    <!-- </div>
-  <!-- </div> -->
+
+
 </div> 
 
 

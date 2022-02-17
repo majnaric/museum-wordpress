@@ -1,5 +1,18 @@
 <?php
 
+require get_theme_file_path('/inc/search-route.php');
+
+function museum_custom_rest(){
+    register_rest_field('post', 'authorName', array(
+        'get_callback' => function(){return get_the_author();}
+    ));
+}
+
+add_action('rest_api_init', 'museum_custom_rest');
+
+
+
+
 function pageBanner($args = NULL){
 
 
@@ -53,11 +66,15 @@ function pageBanner($args = NULL){
 
 
 function museum_files(){
+    wp_enqueue_script('jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js', NULL, '1.0', true);
     wp_enqueue_script('main-museum-js', get_theme_file_uri('/bundled.js'), NULL, '1.0', true);
     wp_enqueue_script('main-museum-js', get_theme_file_uri('/scripts/App.js'));
     wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
     wp_enqueue_style('font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
     wp_enqueue_style('museum_main_styles', get_stylesheet_uri());
+    wp_localize_script('main-museum-js', 'museumData', array(
+        'root_url' => get_site_url()
+    ));
 }
 
 add_action('wp_enqueue_scripts', 'museum_files');
