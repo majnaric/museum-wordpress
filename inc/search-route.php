@@ -95,12 +95,42 @@ if(get_post_type() == 'event'){
         }
     
         $departmentRelationshipQuery = new WP_Query(array(
-            'post_type' => 'curator',
+            'post_type' => array('curator', 'event', 'exhibition'),
             'meta_query' => $departmentMetaQuery
                 ));
     
                 while($departmentRelationshipQuery->have_posts()){
                     $departmentRelationshipQuery->the_post();
+
+                    if(get_post_type() == 'exhibition'){
+
+                        array_push($results['exhibitions'], array(
+                            'title' => get_the_title(),
+                            'permalink' => get_the_permalink()
+                        ));
+                    }
+    
+
+                    if(get_post_type() == 'exhibition'){
+
+                        $eventDate = new DateTime(get_field('event_date'));
+                        $description = null;
+                        
+                        if(has_excerpt()){
+                        $description =  get_the_excerpt();
+                        } else {
+                        $description =  wp_trim_words(get_the_content(), 18);
+                        }
+                        
+                    
+                    
+                        array_push($results['events'], array(
+                            'title' => get_the_title(),
+                            'permalink' => get_the_permalink(),
+                            'date' => $eventDate-> format('d M'),
+                            'description' => $description
+                        ));
+                    }
     
                     if(get_post_type() == 'curator'){
     
@@ -114,6 +144,8 @@ if(get_post_type() == 'event'){
                 }
     
                 $results['curators'] = array_values(array_unique($results['curators'], SORT_REGULAR));
+                $results['events'] = array_values(array_unique($results['events'], SORT_REGULAR));
+                $results['exhibitions'] = array_values(array_unique($results['exhibitions'], SORT_REGULAR));
     }
 
    

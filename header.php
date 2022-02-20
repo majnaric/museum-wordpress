@@ -34,7 +34,7 @@
               <li <?php if(get_post_type() == 'department') echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/departments') ?>">Departments</a></li>
               <li <?php if(is_page('privacy-policy')) echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/privacy-policy') ?>">Privacy Policy</a></li>
               <li <?php if(get_post_type() == 'post') echo 'class="current-menu-item"' ?>><a href="<?php echo site_url('/blog') ?>">Blog</a></li>
-              <li><i class="fa-solid fa-magnifying-glass js-search-trigger"></i></li>
+              <li><a href="<?php echo esc_url(site_url('/search')) ?>"><i class="fa-solid fa-magnifying-glass js-search-trigger"></i></a></li>
             </ul>
           </nav>
           <a href="#" class="btn btn__login">Login</a>
