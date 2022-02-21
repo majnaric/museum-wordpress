@@ -90,3 +90,51 @@
     }
   }
 }
+
+/* note styles */
+#my-notes {
+  & li {
+    list-style: none;
+    margin-bottom: 6rem;
+    margin-top: 2rem;
+  }
+}
+.note-title-field {
+  width: fit-content;
+  height: fit-content;
+  display: inline-block;
+  border: none;
+  font-size: 2.5rem;
+  float: left;
+  margin-left: 2.5rem;
+  background-color: transparent;
+  font-weight: 500;
+}
+
+.note-text-field {
+  display: block;
+  width: 90%;
+  margin: 3rem auto;
+  height: fit-content;
+  background-color: transparent;
+  border: none;
+  resize: none;
+}
+.note-edit,
+.note-delete {
+  position: relative;
+  top: 1rem;
+  margin-right: 1rem;
+  font-size: 1rem;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: rgb(89 83 134);
+  color: #fff;
+}
+
+.fa-pencil,
+.fa-trash-can {
+  border: none;
+  margin-right: 10px;
+}

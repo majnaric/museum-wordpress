@@ -37,8 +37,21 @@
               <li><a href="<?php echo esc_url(site_url('/search')) ?>"><i class="fa-solid fa-magnifying-glass js-search-trigger"></i></a></li>
             </ul>
           </nav>
-          <a href="#" class="btn btn__login">Login</a>
-            <a href="#" class="btn btn__sign-up">Sign Up</a>
+          <?php  if(is_user_logged_in()){ ?>
+
+            <a href="<?php echo esc_url(site_url('/my-notes')); ?>" class="btn btn__login">My Notes</a>
+
+            <a href="<?php echo wp_logout_url(); ?>" class="btn btn__sign-up btn--with-photo">
+            <span class="site-header__avatar"><?php echo get_avatar(get_current_user_id(), 60); ?></span>
+            <span>Log Out</span>
+            </a>
+
+          <?php } else { ?>
+
+            <a href="<?php echo wp_login_url(); ?>" class="btn btn__login">Login</a>
+            <a href="<?php echo wp_registration_url(); ?>" class="btn btn__sign-up">Sign Up</a>
+          <?php } ?>
+          
         </div>
       
       </div>

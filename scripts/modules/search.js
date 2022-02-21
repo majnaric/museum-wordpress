@@ -119,7 +119,7 @@ class Search {
       `
 
     
-    // kraj primera
+    // kraj  primera
 
     
       this.isSpinnerVisible = false

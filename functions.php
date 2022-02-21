@@ -1,6 +1,7 @@
 <?php
 
 require get_theme_file_path('/inc/search-route.php');
+require get_theme_file_path('/inc/login-style.php');
 
 function museum_custom_rest(){
     register_rest_field('post', 'authorName', array(
@@ -90,3 +91,45 @@ function museum_features(){
 }
 
 add_action('after_setup_theme', 'museum_features');
+
+
+// Redirect subscriber accounts out of admin and onto homepage
+add_action('admin_init', 'redirectSubsToFrontend');
+
+function redirectSubsToFrontend(){
+    $ourCurrentUser = wp_get_current_user();
+    
+    if(count($ourCurrentUser->roles) == 1 AND $ourCurrentUser->roles[0] == 'subscriber'){
+
+        wp_redirect(site_url('/'));
+        exit;
+
+    }
+}
+
+add_action('wp_loaded', 'noSubsAdminBar');
+
+function noSubsAdminBar(){
+    $ourCurrentUser = wp_get_current_user();
+    
+    if(count($ourCurrentUser->roles) == 1 AND $ourCurrentUser->roles[0] == 'subscriber'){
+
+        show_admin_bar(false);
+
+    }
+}
+
+// Customize login screen
+
+add_filter('login_headerurl', 'ourHeaderurl');
+
+function ourHeaderurl(){
+    return esc_url(site_url('/'));
+}
+
+add_action('login_enqueue-scripts', 'ourLoginCSS');
+
+function ourLoginCSS(){
+    wp_enqueue_style('museum_main_styles', get_stylesheet_uri());
+}
+
