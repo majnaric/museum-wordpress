@@ -35,6 +35,7 @@ class Like {
         likeCount++
         currentLikeBox.querySelector(".like-count").innerHTML = likeCount
         currentLikeBox.setAttribute("data-like", response.data)
+        console.log(response);
       }
       console.log(response.data)
     } catch (e) {
