@@ -1,11 +1,16 @@
 <?php
 
+require get_theme_file_path('/inc/like-route.php');
 require get_theme_file_path('/inc/search-route.php');
 require get_theme_file_path('/inc/login-style.php');
 
 function museum_custom_rest(){
     register_rest_field('post', 'authorName', array(
         'get_callback' => function(){return get_the_author();}
+    ));
+
+    register_rest_field('note', 'userNoteCount', array(
+        'get_callback' => function(){return count_user_posts(get_current_user_id(), 'note');}
     ));
 }
 
@@ -72,9 +77,11 @@ function museum_files(){
     wp_enqueue_script('main-museum-js', get_theme_file_uri('/scripts/App.js'));
     wp_enqueue_style('custom-google-fonts', '//fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
     wp_enqueue_style('font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+    wp_enqueue_style('font-awesome-older', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css');
     wp_enqueue_style('museum_main_styles', get_stylesheet_uri());
     wp_localize_script('main-museum-js', 'museumData', array(
-        'root_url' => get_site_url()
+        'root_url' => get_site_url(),
+        'nonce' => wp_create_nonce('wp_rest')
     ));
 }
 
@@ -131,5 +138,27 @@ add_action('login_enqueue-scripts', 'ourLoginCSS');
 
 function ourLoginCSS(){
     wp_enqueue_style('museum_main_styles', get_stylesheet_uri());
+}
+
+// Force Note Posts to be private
+
+add_filter('wp_insert_post_data', 'makeNotePrivate', 10, 2);
+
+function makeNotePrivate($data, $postarr){
+
+    if($data['post_type'] == 'note') {
+
+        if (count_user_posts(get_current_user_id(), 'note') > 4 AND !$postarr['ID'] ) {
+            die("You have reached your note limit");
+        }
+
+        $data['post_content'] = sanitize_textarea_field($data['post_content']);
+        $data['post_title'] = sanitize_text_field($data['post_title']);
+    }
+    if($data['post_type'] == 'note' AND $data['post_status'] != 'trash') {
+        $data['post_status'] = 'private';
+    }
+
+    return $data;
 }
 

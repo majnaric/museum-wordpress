@@ -35,7 +35,7 @@ the_post();?>
 <p class="pagination-links"><?php echo paginate_links();?></p>
 </div>
 
-</div>
+
 
 
 
@@ -43,3 +43,5 @@ the_post();?>
 
 
 <?php get_footer(); ?>
+
+</div>

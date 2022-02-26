@@ -121,7 +121,8 @@
   resize: none;
 }
 .note-edit,
-.note-delete {
+.note-delete,
+.note-update {
   position: relative;
   top: 1rem;
   margin-right: 1rem;
@@ -133,8 +134,162 @@
   color: #fff;
 }
 
+.note-update {
+  left: -22.8rem;
+  top: -2rem;
+  background-color: #797979;
+}
+
 .fa-pencil,
-.fa-trash-can {
+.fa-trash-can,
+.fa-arrow-right {
   border: none;
   margin-right: 10px;
+}
+
+.note-update {
+  visibility: hidden;
+}
+
+.note-update--visible {
+  visibility: visible;
+}
+
+.note-active-field {
+  border: 1px solid #ddd;
+  animation: pulseBorder 0.75s alternate infinite;
+}
+
+@keyframes pulseBorder {
+  0% {
+    border: 3px solid #fff;
+    border-radius: 5px;
+  }
+
+  100% {
+    border: 3px solid rgb(89 83 134);
+    border-radius: 5px;
+  }
+}
+
+/* Create Note */
+.note-create {
+  background-color: #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.new-note-title {
+  width: 100%;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+  box-sizing: border-box;
+}
+
+.new-note-text {
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+  padding: 10px;
+  font-family: "Roboto", sans-serif;
+  border: none;
+  margin-bottom: 10px;
+  height: 170px;
+  font-size: 1.15rem;
+  line-height: 1.65;
+}
+
+/* Reveal and Hide Fade Transitions */
+#my-notes li {
+  transition: all 0.4s ease-out;
+  opacity: 1;
+}
+
+#my-notes li.fade-out {
+  height: 0px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  opacity: 0.5;
+}
+
+#my-notes li.fade-in-calc {
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.note-submit {
+  position: absolute;
+  box-shadow: none;
+  color: rgb(89 83 134);
+  margin-top: 11.5rem;
+  margin-left: -8rem;
+}
+
+.note-limit-message {
+  visibility: hidden;
+}
+
+.active {
+  visibility: visible;
+}
+
+/* Like Box */
+.like-box {
+  float: right;
+  font-size: 1rem;
+  background-color: #ededed;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  color: red;
+  padding: 10px 10px 10px 25px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: -15px 50px 30px 30px;
+  position: relative;
+}
+
+.like-box:hover {
+  background-color: #dedede;
+}
+
+.like-count {
+  padding-left: 10px;
+}
+
+.fa {
+  border: none;
+}
+
+.like-box .fa-heart-o {
+  transition: all 0.35s ease-out;
+  position: absolute;
+  left: 10px;
+}
+
+.like-box .fa-heart {
+  left: 10px;
+  transition: all 0.4s ease-out;
+  position: absolute;
+  visibility: hidden;
+  transform: scale(0.2);
+  opacity: 0;
+}
+
+.like-box[data-exists="yes"] .fa-heart {
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+}
+
+.like-box[data-exists="yes"] .fa-heart-o {
+  visibility: hidden;
+  opacity: 0;
 }

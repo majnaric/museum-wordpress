@@ -73,7 +73,7 @@ the_post();
 <div class="exhibition-page--expo__description post_item">
 <p>Looking for a recap of our past events? <a href="<?php echo site_url('/past-events') ?>">Check out our past events archive.</a></p>
 </div>
-</div>
+
 
 
 
@@ -81,3 +81,5 @@ the_post();
 
 
 <?php get_footer(); ?>
+
+</div>
