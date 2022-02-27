@@ -11,13 +11,13 @@
 
   &__sign-up {
     position: relative;
-    top: 0.75rem;
+    top: 1.5rem;
     left: 5rem;
   }
   &__login {
     position: relative;
-    top: -0.25rem;
-    left: 0;
+    top: 1.5rem;
+    left: 4rem;
   }
   &__learn-more {
     width: fit-content;
@@ -78,4 +78,8 @@
 .btn:active {
   background-color: rgb(255, 164, 28);
   color: #fff;
+}
+
+.js-search-trigger {
+  border: none;
 }

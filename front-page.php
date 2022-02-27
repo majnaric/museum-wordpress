@@ -12,7 +12,6 @@
       <div class="large-hero__section">
           <h1 class="large-hero__title">Imaginary Museum</h1>
           <h3 class="large-hero__subtitle">Welcome to our Imaginary Museum.</h3>
-          <p><a href="#" class="btn open-modal">Get In Touch</a></p>
       </div>
 
       <div class="social-network">

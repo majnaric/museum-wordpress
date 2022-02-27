@@ -39,7 +39,7 @@ function createLike ($data) {
                 'post_status' => 'publish',
                 'post_title' => '2nd test post',
                 'meta_input' => array(
-                    'liked_exhibition_id' => 12345
+                    'liked_exhibition_id' => $exhibition
                 )
             ));
 

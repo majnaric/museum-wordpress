@@ -17,8 +17,6 @@
     </div>
 
     <div class="row__3--zaglavlje-input wrapper">
-      <!-- <input type="text" class="zaglavlje__input open-modal" placeholder="Search"><i class="fas fa-search"></i> -->
-      <p><a href="#" class="btn open-modal">Get In Touch</a></p>
     </div>
 
     <div class="row__3--zaglavlje-author">
