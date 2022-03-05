@@ -14,18 +14,19 @@
   padding-bottom: 30px;
 
   @mixin atSmall {
-    top: 96vh;
-    width: 100vw;
+    top: 49rem;
+    width: 100%;
     padding: 0;
   }
   @mixin atMedium {
     width: 100%;
     left: 0;
+    top: 48rem;
   }
 
   @mixin atLarge {
     top: 50rem;
-    width: 96.5vw;
+    width: 100%;
   }
 }
 
@@ -379,11 +380,11 @@
 
     @mixin atLarge {
       position: absolute;
-      top: 0;
+      top: 3rem;
       left: -0.5rem;
       margin: 1rem 2rem;
-      width: 3rem;
-      height: 3rem;
+      width: 5rem;
+      height: 5rem;
       font-size: 1.3rem;
     }
     & p {
@@ -424,7 +425,7 @@
 
     @mixin atLarge {
       position: relative;
-      left: 3rem;
+      left: 0;
       margin-bottom: 2rem;
     }
   }
@@ -450,10 +451,11 @@
       position: relative;
       height: fit-content;
       top: 1px;
+      left: 23px;
       margin-top: 0;
       margin-bottom: 2rem;
       /* top: -100px; */
-      width: 68%;
+      width: 66%;
     }
     &-department {
       text-align: center;

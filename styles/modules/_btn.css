@@ -11,13 +11,38 @@
 
   &__sign-up {
     position: relative;
-    top: 1.5rem;
     left: 5rem;
+    @mixin atMedium {
+      top: -6.3rem;
+    }
+
+    @mixin atLarge {
+      top: 1.5rem;
+    }
   }
   &__login {
     position: relative;
-    top: 1.5rem;
-    left: 4rem;
+    top: -0.3rem;
+    /* left: 4rem; */
+
+    @mixin atSmall {
+      top: -0.5rem;
+      left: 3.5rem;
+    }
+
+    @mixin atMedium {
+      top: -0.5rem;
+      left: 3.5rem;
+    }
+
+    @mixin atLargeMedium {
+      /* top: 1rem; */
+    }
+
+    @mixin atLarge {
+      top: -0.3rem;
+      left: 4rem;
+    }
   }
   &__learn-more {
     width: fit-content;
@@ -41,8 +66,22 @@
   }
 
   &--with-photo {
-    top: -4px;
-    left: 20px;
+    /* top: -4px; */
+    /* left: 85px; */
+
+    @mixin atMedium {
+      top: -0.5rem;
+      left: 7rem;
+    }
+
+    @mixin atLargeMedium {
+      /* top: 1rem; */
+    }
+
+    @mixin atLarge {
+      top: -4px;
+      left: 85px;
+    }
   }
 }
 
@@ -54,6 +93,14 @@
   left: -1rem;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+
+  @mixin atMedium {
+    /* display: none; */
+  }
+
+  @mixin atLarge {
+    display: inline-block;
+  }
 }
 
 .exhibition-page--expo__description .btn--post {

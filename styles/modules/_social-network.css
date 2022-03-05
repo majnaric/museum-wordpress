@@ -1,12 +1,15 @@
 .social-network {
-  margin-left: 4rem;
+  margin-left: 6%;
 
-  @mixin atMedium {
-    width: 90%;
+  @mixin atSmall {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 90%;
   }
 
   @mixin atLarge {
-    width: 35%;
+    margin-left: 4rem;
+    width: fit-content;
   }
 
   &__icon {

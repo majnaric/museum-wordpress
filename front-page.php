@@ -3,109 +3,106 @@
 
 <div class="large-hero-wrap">
     <div class="large-hero">
-        <!-- <source class="large-hero" srcset="assets/images/hero-image-large.jpg" media="(min-width: 1380px)">
-        <source class="large-hero" srcset="assets/images/hero-image-medium.jpg" media="(min-width: 990px)">
-        <source class="large-hero" srcset="assets/images/hero-image-small.jpg" media="(min-width: 640px)">
-        <img class="large-hero" srcset="assets/images/hero-image-smaller.jpg" alt="Coastal view of oceans and mountains" class="large-hero__image"> -->
-        </div>
+    
+    </div>
 </div>
-      <div class="large-hero__section">
-          <h1 class="large-hero__title">Imaginary Museum</h1>
-          <h3 class="large-hero__subtitle">Welcome to our Imaginary Museum.</h3>
-      </div>
 
-      <div class="social-network">
-        <a href="https://www.facebook.com/"><i class="fab fa-facebook social-network__icon"></i></a>
-        <a href="https://www.twitter.com/"><i class="fab fa-twitter social-network__icon"></i></a>
-        <a href="https://www.instagram.com/"><i class="fab fa-instagram social-network__icon"></i></a>
-        <i class="far fa-envelope social-network__icon"></i>
-      </div>
-      <div class="clear-me"></div>
+<div class="large-hero__section">
+  <h1 class="large-hero__title">Imaginary Museum</h1>
+  <h3 class="large-hero__subtitle">Welcome to our Imaginary Museum.</h3>
+</div>
 
+<div class="social-network">
+  <a href="https://www.facebook.com/"><i class="fab fa-facebook social-network__icon"></i></a>
+  <a href="https://www.twitter.com/"><i class="fab fa-twitter social-network__icon"></i></a>
+  <a href="https://www.instagram.com/"><i class="fab fa-instagram social-network__icon"></i></a>
+  <i class="far fa-envelope social-network__icon"></i>
+</div>
 
+<div class="clear-me"></div>
 
-      
-  <div class="wrapper news-and-blog">    
-    <div class="page-section row__6 page-section__news row__6-forMedium">
-      <div class="wrapper">
+<div class="wrapper news-and-blog">    
+  <div class="page-section row__6 page-section__news row__6-forMedium">
+    <div class="wrapper">
       <h1 class="page-links page-links--white events-section__title"><a class="custom-underline custom-underline--white custom-underline--title" href="<?php echo site_url('/exhibition'); ?>">EXHIBITION</a></h1>
 
+      <?php 
+        $today = date('Ymd');
+        $homepageExhibition = new WP_Query(array(
+          'posts_per_page' => 3,
+          'post_type' => 'exhibition',
+        ));
 
-        <?php 
-$today = date('Ymd');
-$homepageExhibition = new WP_Query(array(
-  'posts_per_page' => 3,
-  'post_type' => 'exhibition',
-));
+        while($homepageExhibition->have_posts()){
+        $homepageExhibition->the_post(); ?>
 
- while($homepageExhibition->have_posts()){
-$homepageExhibition->the_post(); ?>
-
-<div class="events-section__card"> 
+      <div class="events-section__card"> 
     
-          <h2 class="page-section__news-title page-links page-links--white"><a href="<?php the_permalink(); ?>" class="custom-underline custom-underline--white"><?php the_title(); ?></a></h2>
+        <h2 class="page-section__news-title page-links page-links--white"><a href="<?php the_permalink(); ?>" class="custom-underline custom-underline--white"><?php the_title(); ?></a></h2>
 
-          <div class="row__8">
-            <div class="page-section__section-card">
-              <p class="page-section__section-text"><?php 
+        <div class="row__8">
+          <div class="page-section__section-card">
+            <p class="page-section__section-text"><?php 
             if (has_excerpt()){ 
               echo get_the_excerpt();
             } else {
               echo wp_trim_words(get_the_content(), 18);
             }
              ?> <a class="btn__learn-more--light" href="<?php the_permalink(); ?>">Learn more</a></p>
-          <!-- <div class="bottom-border"></div> -->
-            </div>
-          </div>
-          <div class="row__4 page-section__expo-picture">
-            <a href="<?php the_permalink(); ?>"><img src="<?php $pageBannerImage = get_field('page_banner_background_image'); echo $pageBannerImage['sizes']['exhibitionImage'] ?>" alt="The Willamette Meteorite"><p class="page-section__expo-picture--cite">Image source: <cite>https://www.amnh.org</cite></a>
+          
           </div>
         </div>
-
-
-<?php } 
-
-wp_reset_postdata();
-
-?>
-
-
+        
+        <div class="row__4 page-section__expo-picture">
+          <a href="<?php the_permalink(); ?>"><img src="<?php $pageBannerImage = get_field('page_banner_background_image'); echo $pageBannerImage['sizes']['exhibitionImage'] ?>" alt="The Willamette Meteorite"><p class="page-section__expo-picture--cite">Image source: <cite>https://www.amnh.org</cite></a>
+        </div>
       </div>
+
+
+      <?php } 
+
+      wp_reset_postdata();
+
+      ?>
+
+
     </div>
-    <div class="row__4 wrapper events-section row__4-forMedium">
-      <h1 class="page-links page-links--white events-section__title"><a class="custom-underline custom-underline--white custom-underline--title" href="<?php echo site_url('/events'); ?>">EVENTS</a></h1>
+  </div>
+  
+  <div class="row__4 wrapper events-section row__4-forMedium">
+    <h1 class="page-links page-links--white events-section__title"><a class="custom-underline custom-underline--white custom-underline--title" href="<?php echo site_url('/events'); ?>">EVENTS</a></h1>
 
 
-<?php 
-$today = date('Ymd');
-$homepageEvents = new WP_Query(array(
-  'posts_per_page' => 3,
-  'post_type' => 'event',
-  'meta_key' => 'event_date',
-  'orderby' => 'meta_value_num',
-  'order' => 'ASC',
-  'meta_query' => array(
-    array(
-      'key' => 'event_date',
-      'compare' => '>=',
-      'value' => $today,
-      'type' => 'numeric'
-    )
-  )
-));
+    <?php 
+      $today = date('Ymd');
+      $homepageEvents = new WP_Query(array(
+        'posts_per_page' => 3,
+        'post_type' => 'event',
+        'meta_key' => 'event_date',
+        'orderby' => 'meta_value_num',
+        'order' => 'ASC',
+        'meta_query' => array(
+          array(
+            'key' => 'event_date',
+            'compare' => '>=',
+            'value' => $today,
+            'type' => 'numeric'
+          )
+        )
+      ));
 
- while($homepageEvents->have_posts()){
-$homepageEvents->the_post(); ?>
+      while($homepageEvents->have_posts()){
+      $homepageEvents->the_post(); ?>
 
-<div class="events-section__card events-section__card-medium">
+    <div class="events-section__card events-section__card-medium">
 
-        <div class="row__12">
-          <h2 class="events-section__section-title page-links page-links--white"><a href="<?php the_permalink(); ?>" class="custom-underline custom-underline--white"><?php the_title(); ?></a></h2>
+      <div class="row__12">
+        <h2 class="events-section__section-title page-links page-links--white"><a href="<?php the_permalink(); ?>" class="custom-underline custom-underline--white"><?php the_title(); ?></a></h2>
           
           <div class="events-section__date-and-text">
             <p class="events-section__date"><?php
-             $eventDate = new DateTime(get_field('event_date'));
-             echo $eventDate->format('d M') 
+            $eventDate = new DateTime(get_field('event_date'));
+            echo $eventDate->format('d M') 
             ?></p>          
             <p class="events-section__section-text"><?php 
             if (has_excerpt()){ 
@@ -113,19 +110,19 @@ $homepageEvents->the_post(); ?>
             } else {
               echo wp_trim_words(get_the_content(), 18);
             }
-             ?> <a class="btn__learn-more--light" href="<?php the_permalink(); ?>">Learn more</a></p>
+            ?> <a class="btn__learn-more--light" href="<?php the_permalink(); ?>">Learn more</a></p>
           </div>
-        </div>
       </div>
-
-<?php
- }
-?> 
-
-
-
     </div>
+
+  <?php
+   }
+  ?> 
+
+
+
   </div>
+</div>
 
 <div class="clear-me"></div>
 
@@ -212,7 +209,7 @@ $homepageEvents->the_post(); ?>
   </div>
   <div class="hero-description">
       <h2>Paulina Vukobratović</h2>
-    <p>Curator in the Ethnology Department</p>
+    <p>Curator of the Ethnology Department</p>
   </div>
   
   <div class="hero-btn">

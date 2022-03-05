@@ -1,83 +1,114 @@
-class ImageGallery{
-    constructor(){
-        let div = document.querySelectorAll('.exhibition-page--image-container');
 
-// NOTE --- INSTEAD OF LARGE IMAGE SHOWING, CODE A MODAL FOR AN IMAGE;
+// class Modal{
+//     constructor(){
+//        this.injectHTML()
+//        this.modal = document.querySelector(".modal")
+//        this.closeIcon = document.querySelector(".modal__close")
+//        this.openModalButtons = document.querySelectorAll(".exhibition-page--image-container") 
+//        this.events()
+//     }
+   
+//     events(){
+//    //listen for open click
+//    this.openModalButtons.forEach( el => el.addEventListener("click", e => this.openTheModal(e) ))
+   
+//    //Listen for close click
+//    this.closeIcon.addEventListener("click", () => this.closeTheModal())
+   
+//    // pushes any key
+//    document.addEventListener("keyup", e => this.keyPressHandler(e))
+   
+//     }
+   
+//     keyPressHandler(e){
+//        if(e.keyCode == 27){
+//            this.closeTheModal()
+//        }
+//     }
+   
+//    openTheModal(e){
+//        e.preventDefault()
+//        this.modal.classList.add('modal--is-visible')
+//    }
+   
+//    closeTheModal(){
+//        this.modal.classList.remove('modal--is-visible') 
+//    }
+   
+//     injectHTML(){
+//      document.body.insertAdjacentHTML('beforeend', `
+//      <div class="modal">
+//      <div class="modal__inner">
+//        <h2 class="modal__title">Exhibition photos</h2>
+//        <div class="wrapper wrapper--narrow">
+//          <p class="modal__description">We will have an online order system in place soon. Until then, connect with us on any of the platforms below!</p>
+//        </div>
 
+//        </div>
+   
+//      </div>
+   
+//      <div class="modal__close">X</div>
+//    </div>
+//      `)
+//     }
+//    }
+  
 
-        // let pics = ["assets/images/meteors-exhibition/1a.jpg", 
-        // "assets/images/meteors-exhibition/2a.jpg",
-        // "assets/images/meteors-exhibition/3a.jpg",
-        // "assets/images/meteors-exhibition/4a.jpg",
-        // "assets/images/meteors-exhibition/5a.jpg",
-        // "assets/images/meteors-exhibition/6a.jpg",
-        //  "assets/images/meteors-exhibition/7a.jpg",
-        //  "assets/images/meteors-exhibition/8a.jpg"];
-        let hasClass = false;
-    
-    
-        for (let i = 0; i < div.length; i++){
-            let img = document.createElement("img");
-            div[i].appendChild(img);
-            img.setAttribute('src', pics[i]);
-        }
+class Modal{
+  constructor () {
 
     
-        document.addEventListener('click', function(event) {
-    let divImage = document.querySelectorAll('.exhibition-page--image-container img');
-        for(let i = 0; i < div.length; i++){
-    
-    div[i].classList.remove('exhibition-page--expo-resize');
-    }
-    
-    
-    
-            if(event.target.parentNode.classList == 'exhibition-page--image-container' && !hasClass){
-                console.log(this.target)
-                event.target.parentNode.classList.add('exhibition-page--expo-resize');
-                event.target.setAttribute('src', event.target.src.replace('a.jpg', '.jpg'));                
      
-                hasClass = true;
-    
-                event.target.style.position = 'relative';
-    
-                for(let i = 0; i < div.length; i++){
-                    div[i].style.display = 'none'
-    }
-          event.target.parentNode.style.display = 'block'
-            } else if(event.target.parentNode.classList == 'exhibition-page--image-container' && hasClass){
-    
-                event.target.parentNode.classList.remove('exhibition-page--expo-resize');
-let childImage = document.querySelectorAll('div img');
+// Get the modal
+let modal = document.querySelector('#myModal');
+let pageHeader = document.querySelector('.wrapper__header');
 
-console.log(event.target.children.src);
-// event.target.childImage.setAttribute('src', event.target.childImage.src.replace('.jpg', 'a.jpg'))
+// Get the <span> element that closes the modal
+let closeModal = document.querySelector(".close");
 
-
-                hasClass = false;
-    
-                
-                for(let i = 0; i < div.length; i++){
-    div[i].style.display = 'block'
-    }
-    
-            }else{
-                
-                for(let i = 0; i < div.length; i++){
-    
-   div[i].classList.remove('exhibition-page--expo-resize');
-
-   div[i].style.display = 'block';
-
-    }
-    
-
-                hasClass = true;
-            }
-            
-        })
-    
-    }
+// When the user clicks on <span> (x), close the modal
+closeModal.onclick = function() { 
+    modal.style.display = "none";
+    pageHeader.style.display = "block";
 }
 
-export default ImageGallery;
+// Get all images and insert the clicked image inside the modal
+// Get the content of the image description and insert it inside the modal image caption
+var images = document.querySelectorAll('.img');
+let photos = document.querySelectorAll('.expo-photo');
+var modalImg = document.getElementById("img01");
+// var captionText = document.querySelector("#caption");
+var i;
+// for (i = 0; i < images.length; i++) {
+//    images[i].onclick = function(e){
+//      e.preventDefault();
+//        modal.style.display = "block";
+//        modalImg.src = console.log(images[i]);
+//        modalImg.alt = this.alt;
+//       //  captionText.innerHTML = 'this.nextElementSibling.innerHTML';
+//        console.log(e)
+//    }
+// }
+
+photos.forEach(image => {
+  image.onclick = function(e){
+    e.preventDefault();
+      modal.style.display = "block";
+      modalImg.src = this.src.replace("150x150", "480x650");
+      modalImg.innerHTML = console.log(this.src.replace("150x150", "480x650"));
+      modalImg.alt = this.alt;
+      pageHeader.style.display = "none";
+
+  }
+})
+
+  }
+}
+
+
+
+
+
+   export default Modal
+  

@@ -25,16 +25,49 @@ pageBanner(array(
 
 <div class="exhibition-page--expo__photos row__6">
   <div class="exhibition-page--expo-container">
-
-    <div class="exhibition-page--image-container"><img src="<?php $exhibitionPhotoOne = get_field('exhibition_photo_one'); echo $exhibitionPhotoOne['sizes']['thumbnail']; ?>" alt=""></div>
-    <div class="exhibition-page--image-container"><img src="<?php $exhibitionPhotoTwo = get_field('exhibition_photo_two'); echo $exhibitionPhotoTwo['sizes']['thumbnail']; ?>" alt=""></div>
-    <div class="exhibition-page--image-container"><img src="<?php $exhibitionPhotoThree = get_field('exhibition_photo_three'); echo $exhibitionPhotoThree['sizes']['thumbnail']; ?>" alt=""></div>
-    <div class="exhibition-page--image-container"><img src="<?php $exhibitionPhotoFour = get_field('exhibition_photo_four'); echo $exhibitionPhotoFour['sizes']['thumbnail']; ?>" alt=""></div>
-    <div class="exhibition-page--image-container"><img src="<?php $exhibitionPhotoFive = get_field('exhibition_photo_five'); echo $exhibitionPhotoFive['sizes']['thumbnail']; ?>" alt=""></div>
-    <div class="exhibition-page--image-container"><img src="<?php $exhibitionPhotoSix = get_field('exhibition_photo_six'); echo $exhibitionPhotoSix['sizes']['thumbnail']; ?>" alt=""></div>
-    <div class="exhibition-page--image-container"><img src="<?php $exhibitionPhotoSeven = get_field('exhibition_photo_seven'); echo $exhibitionPhotoSeven['sizes']['thumbnail']; ?>" alt=""></div>
-    <div class="exhibition-page--image-container"><img src="<?php $exhibitionPhotoEight = get_field('exhibition_photo_eight'); echo $exhibitionPhotoEight['sizes']['thumbnail']; ?>" alt=""></div>   
+    <div class="responsive">
+      <div class="exhibition-page--image-container img"><img class="expo-photo" src="<?php $exhibitionPhotoOne = get_field('exhibition_photo_one'); echo $exhibitionPhotoOne['sizes']['thumbnail']; ?>" alt=""></div>
+    </div>
     
+    <div class="responsive">
+      <div class="exhibition-page--image-container img"><img class="expo-photo" src="<?php $exhibitionPhotoTwo = get_field('exhibition_photo_two'); echo $exhibitionPhotoTwo['sizes']['thumbnail']; ?>" alt=""></div>
+    </div>
+
+    <div class="responsive">
+      <div class="exhibition-page--image-container img"><img class="expo-photo" src="<?php $exhibitionPhotoThree = get_field('exhibition_photo_three'); echo $exhibitionPhotoThree['sizes']['thumbnail']; ?>" alt=""></div>
+    </div>
+
+    <div class="responsive">
+      <div class="exhibition-page--image-container img"><img class="expo-photo" src="<?php $exhibitionPhotoFour = get_field('exhibition_photo_four'); echo $exhibitionPhotoFour['sizes']['thumbnail']; ?>" alt=""></div>
+    </div>
+
+    <div class="responsive">
+      <div class="exhibition-page--image-container img"><img class="expo-photo" src="<?php $exhibitionPhotoFive = get_field('exhibition_photo_five'); echo $exhibitionPhotoFive['sizes']['thumbnail']; ?>" alt=""></div>
+    </div>
+
+    <div class="responsive">
+      <div class="exhibition-page--image-container img"><img class="expo-photo" src="<?php $exhibitionPhotoSix = get_field('exhibition_photo_six'); echo $exhibitionPhotoSix['sizes']['thumbnail']; ?>" alt=""></div>
+    </div>
+
+    <div class="responsive">
+      <div class="exhibition-page--image-container img"><img class="expo-photo" src="<?php $exhibitionPhotoSeven = get_field('exhibition_photo_seven'); echo $exhibitionPhotoSeven['sizes']['thumbnail']; ?>" alt=""></div>
+    </div>
+
+    <div class="responsive">
+      <div class="exhibition-page--image-container img"><img class="expo-photo" src="<?php $exhibitionPhotoEight = get_field('exhibition_photo_eight'); echo $exhibitionPhotoEight['sizes']['thumbnail']; ?>" alt=""></div>   
+    </div>
+
+
+    <div class="clearfix"></div>
+
+<!-- The Modal -->
+<div id="myModal" class="expoModal">
+  <span class="close">×</span>
+  <img class="modal-content" id="img01">
+  <!-- <div id="caption"></div> -->
+</div>
+
+
   </div>
 
 
