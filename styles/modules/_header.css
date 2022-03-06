@@ -60,7 +60,7 @@
   }
 
   &__menu-content {
-    display: none;
+    display: block;
 
     @mixin atMedium {
       display: block;

@@ -10,8 +10,11 @@
   box-shadow: 5px 5px 15px 1px #333;
 
   &__sign-up {
-    position: relative;
-    left: 5rem;
+    @mixin atSmall {
+      position: relative;
+      left: 5rem;
+      top: 1rem;
+    }
     @mixin atMedium {
       top: -6.3rem;
     }
@@ -27,7 +30,7 @@
 
     @mixin atSmall {
       top: -0.5rem;
-      left: 3.5rem;
+      left: 1rem;
     }
 
     @mixin atMedium {
@@ -66,8 +69,10 @@
   }
 
   &--with-photo {
-    /* top: -4px; */
-    /* left: 85px; */
+    @mixin atSmall {
+      top: -0.5rem;
+      left: 1.9rem;
+    }
 
     @mixin atMedium {
       top: -0.5rem;

@@ -36,6 +36,10 @@ img {
     &:hover {
       font-weight: 700;
     }
+
+    @mixin atMedium {
+      font-size: 2rem;
+    }
   }
 }
 
@@ -87,7 +91,15 @@ img {
 
 .custom-underline {
   &--title {
-    font-size: 3rem !important;
+    @mixin atSmall {
+      font-size: 1.5rem !important;
+      left: 0.3rem;
+    }
+
+    @mixin atMedium {
+      font-size: 3rem !important;
+    }
+
     &-medium {
       font-size: 2rem !important;
     }

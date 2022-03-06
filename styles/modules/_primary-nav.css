@@ -2,6 +2,10 @@
   &--pull-right {
     float: right;
 
+    @mixin atSmall {
+      display: none;
+    }
+
     @mixin atLargeMedium {
       display: none;
     }
