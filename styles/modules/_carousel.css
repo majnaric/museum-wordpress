@@ -13,11 +13,15 @@
   margin-bottom: 0;
 
   @mixin atSmall {
-    margin-top: 202rem;
+    margin-top: 88rem;
+  }
+
+  @mixin atMedium {
+    margin-top: 77rem;
   }
 
   @mixin atLarge {
-    margin-top: 5.5rem;
+    margin-top: 6rem;
   }
 }
 
@@ -46,6 +50,18 @@
     margin-bottom: 0;
     text-align: center;
     font-size: 3rem;
+
+    @mixin atSmall {
+      top: 86rem;
+    }
+
+    @mixin atMedium {
+      top: 74rem;
+    }
+
+    @mixin atLarge {
+      top: 4rem;
+    }
   }
 }
 

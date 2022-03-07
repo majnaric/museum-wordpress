@@ -9,7 +9,7 @@
   }
 
   @mixin atMedium {
-    height: 40rem;
+    height: fit-content;
     top: 198.5rem;
     padding-top: 2rem;
     color: #333;

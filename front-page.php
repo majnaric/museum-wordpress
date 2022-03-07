@@ -36,7 +36,7 @@
         while($homepageExhibition->have_posts()){
         $homepageExhibition->the_post(); ?>
 
-      <div class="events-section__card"> 
+      <div class="exhibition-section__card"> 
     
         <h2 class="page-section__news-title page-links page-links--white"><a href="<?php the_permalink(); ?>" class="custom-underline custom-underline--white"><?php the_title(); ?></a></h2>
 

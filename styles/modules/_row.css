@@ -25,6 +25,10 @@
       width: 100%;
     }
 
+    @mixin atMedium {
+      height: fit-content;
+    }
+
     @mixin atLarge {
       top: 1.3rem;
       width: 25%;
@@ -40,6 +44,10 @@
       width: 100%;
       font-size: 0.8rem;
       text-align: center;
+      top: -1rem;
+    }
+
+    @mixin atMedium {
       top: -1rem;
     }
 

@@ -12,29 +12,31 @@
   &__sign-up {
     @mixin atSmall {
       position: relative;
-      left: 5rem;
+      left: 2rem;
       top: 1rem;
     }
     @mixin atMedium {
-      top: -6.3rem;
+      top: 1.3rem;
+      left: 4rem;
     }
 
     @mixin atLarge {
       top: 1.5rem;
+      left: 4.5rem;
     }
   }
   &__login {
     position: relative;
-    top: -0.3rem;
+    top: 1.5rem;
     /* left: 4rem; */
 
     @mixin atSmall {
-      top: -0.5rem;
+      top: 1rem;
       left: 1rem;
     }
 
     @mixin atMedium {
-      top: -0.5rem;
+      top: 1.3rem;
       left: 3.5rem;
     }
 
@@ -43,7 +45,7 @@
     }
 
     @mixin atLarge {
-      top: -0.3rem;
+      top: 1.5rem;
       left: 4rem;
     }
   }

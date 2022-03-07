@@ -16,7 +16,7 @@ new Like();
 new Modal();
 const search = new Search();
 let imageGallery = new ImageGallery();
-let imageSlider = new ImageSlider();
+new ImageSlider();
 
 let stickyHeader = new StickyHeader();
 
