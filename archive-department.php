@@ -33,8 +33,7 @@ the_post();?>
 
 
 
+</div>
 
 
 <?php get_footer(); ?>
-
-</div>

@@ -25,7 +25,15 @@ img {
     background-color: rgba(109, 11, 11, 0.712);
     position: absolute;
     width: 200px;
-    top: 14rem;
+    top: 14.3rem;
+    font-size: 1.3rem;
+  }
+
+  &--archive-events {
+    @mixin atSmall {
+      margin: 0 auto;
+      left: -5vw;
+    }
   }
 
   /* color: $mainGrey; */

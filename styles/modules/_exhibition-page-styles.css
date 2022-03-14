@@ -19,8 +19,12 @@
 
     @mixin atSmall {
       position: relative;
-      top: -27rem;
+      top: 0;
       font-size: 1.7rem;
+    }
+
+    @mixin atMedium {
+      top: 0;
     }
 
     @mixin atLarge {
@@ -31,6 +35,23 @@
     position: relative;
     left: 40rem;
     width: 200px;
+
+    @mixin atSmall {
+      left: -19vw;
+      width: 39vw;
+      top: -6vh;
+    }
+
+    @mixin atMedium {
+      left: 39vw;
+      top: -7rem;
+    }
+
+    @mixin atLarge {
+      left: 34vw;
+      width: 14vw;
+      top: 7vh;
+    }
   }
 
   &--exhibition-content {
@@ -39,6 +60,23 @@
     position: relative;
     left: -17rem;
     color: #333;
+
+    @mixin atSmall {
+      left: 4vw;
+      width: 58vw;
+    }
+
+    @mixin atMedium {
+      width: 40vw;
+      left: -24vw;
+      top: 3rem;
+    }
+
+    @mixin atLarge {
+      width: 30vw;
+      left: -18vw;
+      top: 0;
+    }
   }
 }
 .exhibition-page--expo__title {
@@ -46,6 +84,20 @@
   text-align: center;
   font-size: 2.5rem;
   letter-spacing: 15px;
+
+  @mixin atSmall {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  @mixin atMedium {
+    margin-top: 0rem;
+  }
+  @mixin atLarge {
+    margin-top: 0;
+  }
 }
 
 .exhibition-page__news-and-blog {
@@ -57,7 +109,11 @@
   width: 100%;
 
   @mixin atSmall {
-    height: 80rem;
+    height: fit-content;
+  }
+
+  @mixin atMedium {
+    height: fit-content;
   }
 
   @mixin atLarge {
@@ -73,11 +129,17 @@
   margin: 0 auto;
 
   @mixin atSmall {
-    margin-top: 42rem;
+    width: 90%;
     color: #000;
+  }
+
+  @mixin atMedium {
+    margin-top: 0;
+    width: 80vw;
   }
   @mixin atLarge {
     margin-top: 0;
+    width: 60vw;
   }
 }
 .exhibition-page--expo__content {
@@ -90,6 +152,23 @@
   line-height: 2;
   color: #fff;
   text-align: justify;
+
+  &--single-exhibition {
+    @mixin atSmall {
+      width: 90%;
+      position: relative;
+      height: 40rem;
+    }
+    @mixin atMedium {
+      position: relative;
+      height: 40rem;
+      width: 90%;
+    }
+    @mixin atLarge {
+      width: 46%;
+      height: fit-content;
+    }
+  }
 }
 
 .exhibition-page--expo__photos {
@@ -98,7 +177,7 @@
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  height: 30rem;
+  height: 0;
 }
 
 .exhibition-page--expo-container {
@@ -106,8 +185,25 @@
   flex-wrap: wrap;
   justify-content: center;
   position: relative;
-  left: 46rem;
-  top: 2.5rem;
+
+  @mixin atSmall {
+    left: -3vw;
+    top: -22.5rem;
+    max-width: 96vw;
+  }
+
+  @mixin atMedium {
+    left: 0;
+    top: -25rem;
+    max-width: 83vw;
+    height: 9vh;
+  }
+
+  @mixin atLarge {
+    left: 49vw;
+    top: -19.5rem;
+    max-width: 50vw;
+  }
 }
 
 .exhibition-page--image-container {

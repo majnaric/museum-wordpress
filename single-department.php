@@ -10,7 +10,7 @@ pageBanner();
 
 <div class="container metabox--container">
     <div class="metabox metabox--position-up metabox--with-home-link">
-        <p class="meta-box--text"><a class="metabox__blog-home-link" href="<?php echo get_post_type_archive_link('department'); ?>"><i class="fa fa-home" aria-hidden="true"></i> All Departments</a><span class="metabox__main"><?php the_title(); ?></span></p>
+        <p class="meta-box--text"><a class="metabox__blog-home-link" href="<?php echo site_url('/departments') ; ?>"><i class="fa fa-home" aria-hidden="true"></i> All Departments</a><span class="metabox__main"><?php the_title(); ?></span></p>
     </div>
 </div>
 
@@ -38,8 +38,9 @@ $relatedCurators = new WP_Query(array(
 ));
 
 if($relatedCurators->have_posts()){
-  echo '<hr>';
+  
   echo '<h2>Curator(s)</h2>';
+  echo '<hr>';
   echo '<ul class="department">';
 while($relatedCurators->have_posts()){
 $relatedCurators->the_post(); ?>
@@ -84,7 +85,7 @@ $homepageEvents = new WP_Query(array(
 ));
 
 if($homepageEvents->have_posts()){
-    echo '<h2>Upcoming ' . get_the_title() . ' Events</h2>';
+    echo '<h2 class="events-section--upcoming-events">Upcoming ' . get_the_title() . ' Events</h2>';
 
 while($homepageEvents->have_posts()){
 $homepageEvents->the_post(); ?>
@@ -95,7 +96,7 @@ $homepageEvents->the_post(); ?>
 <a class="events-section__section-title page-links" href="<?php the_permalink(); ?>"><h2 class="custom-underline custom-underline--title-medium"><?php the_title(); ?></h2></a>
   
   <div class="events-section__date-and-text">
-  <div class="events-section__date events-section__date-department"><p><?php 
+  <div class="events-section__date-department"><p class="events-section__date"><?php 
     $eventDate = new DateTime(get_field('event_date'));
     echo $eventDate-> format('M d');
     ?></p></div>
@@ -132,7 +133,7 @@ $homepageEvents->the_post(); ?>
 </div> -->
 
 
-
+</div>
 
 
 <?php }
@@ -140,4 +141,3 @@ $homepageEvents->the_post(); ?>
 get_footer();
 ?>
 
-</div>

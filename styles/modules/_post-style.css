@@ -73,6 +73,7 @@
     color: white;
     text-decoration: none;
     padding: 10px;
+    margin-left: 6.5vw;
     &:hover {
       text-decoration: underline;
     }
@@ -254,6 +255,19 @@
   cursor: pointer;
   margin: -15px 50px 30px 30px;
   position: relative;
+  top: -44.5rem;
+
+  @mixin atSmall {
+    top: -65.5rem;
+  }
+
+  @mixin atMedium {
+    top: -47.5rem;
+  }
+
+  @mixin atLarge {
+    top: -22.5rem;
+  }
 }
 
 .like-box:hover {

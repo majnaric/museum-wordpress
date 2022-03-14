@@ -13,7 +13,7 @@ pageBanner(array(
 
 <!-- <div class="exhibition-page--expo__description post_item"> -->
 
-<div class="exhibition-page--expo__content">
+<div class="exhibition-page--expo__content exhibition-page--expo__content--single-exhibition">
     
      <!-- <div class="exhibition-page--expo__description row__6"> -->
 <?php the_content(); ?>

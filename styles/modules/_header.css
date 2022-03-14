@@ -74,11 +74,25 @@
     height: fit-content;
     color: #333;
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 900;
     position: relative;
     left: -27rem;
     top: 0.3rem;
     display: inline-block;
+
+    @mixin atSmall {
+      left: -2.7rem;
+      top: 0.2rem;
+    }
+
+    @mixin atMedium {
+      top: 2.6rem;
+      left: -3rem;
+    }
+    @mixin atLarge {
+      left: -10rem;
+      top: 0.3rem;
+    }
   }
   &--is-not-visible {
     visibility: hidden;
@@ -87,5 +101,17 @@
 
 .navBar--positioned-right {
   position: relative;
-  top: -2.7rem;
+  top: -3.1rem;
+
+  @mixin atSmall {
+    display: none;
+  }
+
+  @mixin atMedium {
+    display: none;
+  }
+
+  @mixin atLarge {
+    display: block;
+  }
 }

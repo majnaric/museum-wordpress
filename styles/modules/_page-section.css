@@ -329,12 +329,38 @@
 
   &__card-medium {
     @mixin atMedium {
-      height: 22rem;
-      padding-top: 2rem;
+      height: 20rem;
     }
 
     @mixin atLarge {
       height: fit-content;
+    }
+    &--archive-events {
+      @mixin atSmall {
+        height: fit-content;
+      }
+
+      @mixin atMedium {
+        height: fit-content;
+        padding-top: 2rem;
+      }
+
+      @mixin atLarge {
+        height: fit-content;
+      }
+    }
+
+    &--archive-exhibition {
+      @mixin atSmall {
+        height: 28rem;
+      }
+      @mixin atMedium {
+        height: 20rem;
+      }
+
+      @mixin atLarge {
+        height: fit-content;
+      }
     }
   }
 
@@ -396,7 +422,7 @@
 
     @mixin atLarge {
       position: absolute;
-      top: 3rem;
+      top: 2rem;
       left: -0.5rem;
       margin: 1rem 2rem;
       width: 5rem;
@@ -415,10 +441,28 @@
     &-department {
       top: 0.5rem;
       left: 4rem;
+      color: #fff;
     }
 
     &--inside {
       color: #fff;
+    }
+
+    &--archive-events {
+      @mixin atSmall {
+        top: -1rem;
+        left: 26vw;
+      }
+
+      @mixin atMedium {
+        left: 1rem;
+        top: -3rem;
+      }
+
+      @mixin atLarge {
+        left: 2vw;
+        top: 0;
+      }
     }
   }
 
@@ -443,6 +487,37 @@
       position: relative;
       left: 0;
       margin-bottom: 2rem;
+    }
+
+    &--archive-events {
+      left: 5.5rem;
+
+      @mixin atMedium {
+        width: fit-content;
+        left: 11vw;
+        font-size: 2.3vw;
+        position: relative;
+        text-align: center;
+      }
+
+      @mixin atLarge {
+        left: 11vw;
+      }
+    }
+
+    &--archive-exhibition {
+      @mixin atSmall {
+        left: 2.5vw;
+      }
+
+      @mixin atMedium {
+        width: fit-content;
+        left: -20vw;
+      }
+
+      @mixin atLarge {
+        left: -6vw;
+      }
     }
   }
 
@@ -477,9 +552,9 @@
       width: 68%;
     }
     &-department {
-      text-align: center;
+      text-align: justify;
       width: fit-content;
-      left: -11rem;
+      left: -23rem;
       top: -2rem;
     }
   }
@@ -487,6 +562,23 @@
   &__content-archive-events {
     width: 75%;
     float: right;
+    text-align: justify;
+
+    @mixin atSmall {
+      margin-top: 0;
+    }
+
+    @mixin atMedium {
+      margin-top: 2rem;
+    }
+
+    @mixin atLarge {
+      margin-top: 0;
+    }
+  }
+
+  &--upcoming-events {
+    margin-top: 4rem;
   }
 }
 
