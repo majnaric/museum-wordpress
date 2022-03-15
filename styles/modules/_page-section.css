@@ -328,8 +328,11 @@
   }
 
   &__card-medium {
+    @mixin atSmall {
+      height: 24rem;
+    }
     @mixin atMedium {
-      height: 20rem;
+      height: 14rem;
     }
 
     @mixin atLarge {
@@ -341,7 +344,7 @@
       }
 
       @mixin atMedium {
-        height: fit-content;
+        height: 20rem;
         padding-top: 2rem;
       }
 
@@ -439,9 +442,22 @@
     }
 
     &-department {
-      top: 0.5rem;
-      left: 4rem;
       color: #fff;
+
+      @mixin atSmall {
+        position: relative;
+        top: -2rem;
+      }
+
+      @mixin atMedium {
+        position: relative;
+        left: -27vw;
+      }
+
+      @mixin atLarge {
+        top: 0.5rem;
+        left: 1rem;
+      }
     }
 
     &--inside {
@@ -553,9 +569,33 @@
     }
     &-department {
       text-align: justify;
-      width: fit-content;
-      left: -23rem;
-      top: -2rem;
+      /* width: fit-content; */
+      /* left: -23rem; */
+      /* top: -4.5rem; */
+
+      @mixin atSmall {
+        position: relative;
+        width: 100%;
+        height: fit-content;
+        left: 0vw;
+        top: -0.5rem;
+      }
+
+      @mixin atMedium {
+        position: relative;
+        width: 50vw;
+        height: fit-content;
+        left: -3vw;
+        top: -5.5rem;
+      }
+
+      @mixin atLarge {
+        position: relative;
+        width: 40vw;
+        height: fit-content;
+        left: 0;
+        top: -2rem;
+      }
     }
   }
 

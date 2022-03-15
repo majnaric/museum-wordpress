@@ -10,11 +10,11 @@ pageBanner();
 
 
 <div class="exhibition-page__title">
-    <h1><?php the_title(); ?></h1>
+    
 </div>
 
 
-<div class="wrapper news-and-blog exhibition-page__news-and-blog">
+<!-- <div class="wrapper news-and-blog exhibition-page__news-and-blog"> -->
 
 <div class="exhibition-page--expo__title"><p><?php the_field('page_banner_subtitle'); ?></p></div>
 
@@ -25,8 +25,8 @@ pageBanner();
      <div class="curator-thumb"> 
 <?php the_post_thumbnail('curatorPortrait'); ?>
      </div>
-     <div class="row__8">
-<?php the_content(); ?>
+     <div class="row__8 content--curator-content">
+  <p class=""><?php the_content(); ?></p>
      </div>
 </div>
 
@@ -34,7 +34,7 @@ pageBanner();
 $relatedDepartments = get_field('related_departments');
 
 if($relatedDepartments){
-    echo '<hr>';
+    echo '<hr class="section-break--curator-department">';
     echo '<h2>Department(s)</h2>';
     echo '<ul class="department">';
      foreach($relatedDepartments as $department){ ?>
