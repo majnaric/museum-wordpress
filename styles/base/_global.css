@@ -32,7 +32,7 @@ img {
   &--archive-events {
     @mixin atSmall {
       margin: 0 auto;
-      left: -5vw;
+      left: -9vw;
     }
   }
 

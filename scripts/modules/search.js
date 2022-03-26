@@ -60,28 +60,28 @@ class Search {
 
 
       this.resultsDiv.innerHTML = `
-        <div class="row">
-          <div class="one-third">
-            <h2 class="search-overlay__section-title">General Information</h2>
-            ${results.generalInfo.length   ? '<ul class="link-list min-list">' : "<p>No general information matches that search.</p>"}
-              ${results.generalInfo.map(item => `<li><a href="${item.permalink}">${item.title}</a> ${item.postType == "post" ? `by ${item.authorName}` : ""}</li>`).join("")}
+        <div class="search__row">
+          <div class="search__one-third">
+            <h2 class="search__section-title">General Information</h2>
+            ${results.generalInfo.length   ? '<ul class="search--list">' : "<p>No general information matches that search.</p>"}
+              ${results.generalInfo.map(item => `<li class="search--list-item"><a class="btn__learn-more btn__learn-more--dark" href="${item.permalink}">${item.title}</a> ${item.postType == "post" ? `by ${item.authorName}` : ""}</li>`).join("")}
             ${results.generalInfo.length ? "</ul>" : ""}
           </div>
-          <div class="one-third">
-            <h2 class="search-overlay__section-title">Departments</h2>
-            ${results.departments.length ? '<ul class="link-list min-list">' : `<p>No programs match that search. <a href="${museumData.root_url}/departments">View all departments</a></p>`}
-              ${results.departments.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join("")}
+          <div class="search__one-third">
+            <h2 class="search__section-title">Departments</h2>
+            ${results.departments.length ? '<ul class="search--list">' : `<p>No programs match that search. <a href="${museumData.root_url}/departments">View all departments</a></p>`}
+              ${results.departments.map(item => `<li class="search--list-item"><a class="btn__learn-more btn__learn-more--dark" href="${item.permalink}">${item.title}</a></li>`).join("")}
             ${results.departments.length ? "</ul>" : ""}
 
-            <h2 class="search-overlay__section-title">Curators</h2>
-            ${results.curators.length ? '<ul class="professor-cards">' : `<p>No curators match that search.</p>`}
+            <h2 class="search__section-title">Curators</h2>
+            ${results.curators.length ? '<ul class="search--list">' : `<p>No curators match that search.</p>`}
               ${results.curators
           .map(
             item => `
-                <li class="professor-card__list-item">
-                  <a class="professor-card" href="${item.permalink}">
-                    <img class="professor-card__image" src="${item.image}">
-                    <span class="professor-card__name">${item.title}</span>
+                <li class="search--list-item">
+                  <a class="btn__learn-more btn__learn-more--dark"" href="${item.permalink}">
+                    <img class="search--curator-image" src="${item.image}">
+                    <span class="btn__learn-more btn__learn-more--dark search--list">${item.title}</span>
                   </a>
                 </li>
               `
@@ -90,24 +90,24 @@ class Search {
             ${results.curators.length ? "</ul>" : ""}
 
           </div>
-          <div class="one-third">
-            <h2 class="search-overlay__section-title">Exhibitions</h2>
-            ${results.exhibitions.length ? '<ul class="link-list min-list">' : `<p>No Exhibitions match that search. <a href="${museumData.root_url}/exhibitions">View all Exhibitions</a></p>`}
-              ${results.exhibitions.map(item => `<li><a href="${item.permalink}">${item.title}</a></li>`).join("")}
+          <div class="search__one-third">
+            <h2 class="search__section-title">Exhibitions</h2>
+            ${results.exhibitions.length ? '<ul class="search--list">' : `<p>No Exhibitions match that search. <a class="btn__learn-more btn__learn-more--dark" href="${museumData.root_url}/exhibitions">View all Exhibitions</a></p>`}
+              ${results.exhibitions.map(item => `<li class="search--list-item"><a class="btn__learn-more btn__learn-more--dark" href="${item.permalink}">${item.title}</a></li>`).join("")}
             ${results.exhibitions.length ? "</ul>" : ""}
 
-            <h2 class="search-overlay__section-title">Events</h2>
-            ${results.events.length ? "" : `<p>No events match that search. <a href="${museumData.root_url}/events">View all events</a></p>`}
+            <h2 class="search__section-title">Events</h2>
+            ${results.events.length ? "" : `<p>No events match that search. <a class="btn__learn-more btn__learn-more--dark" href="${museumData.root_url}/events">View all events</a></p>`}
               ${results.events
           .map(
             item => `
-                <div class="event-summary">
+                <div class="events-section__date-search-container">
                   <a class="event-summary__date t-center" href="${item.permalink}">
-                    <span class="event-summary__month">${item.date}</span>  
+                    <span class="events-section__date events-section__date--inside events-section__date--search">${item.date}</span>  
                   </a>
                   <div class="event-summary__content">
-                    <h5 class="event-summary__title headline headline--tiny"><a href="${item.permalink}">${item.title}</a></h5>
-                    <p>${item.description} <a href="${item.permalink}" class="nu gray">Learn more</a></p>
+                    <h5 class="event-summary__title headline headline--tiny"><a class="btn__learn-more btn__learn-more--dark search-title" href="${item.permalink}">${item.title}</a></h5>
+                    <p>${item.description} <a href="${item.permalink}" class="btn__learn-more btn__learn-more--dark">Learn more</a></p>
                   </div>
                 </div>
               `

@@ -15,7 +15,7 @@ pageBanner();
 
 
 
-<div class="exhibition-page--expo__description">
+<div class="exhibition-page--expo__description exhibition-page--expo__description-notes">
   
 
 <div class="exhibition-page--expo__description post_item">
@@ -56,6 +56,7 @@ pageBanner();
 </div> 
 
 </div> 
+</div>
 
 
 

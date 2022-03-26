@@ -432,6 +432,15 @@
       height: 5rem;
       font-size: 1.3rem;
     }
+
+    &--search {
+      @mixin atLarge {
+        position: relative;
+        margin-top: 0px;
+        margin-bottom: 62px;
+        margin-left: 0;
+      }
+    }
     & p {
       width: fit-content;
       text-align: center;
@@ -471,7 +480,7 @@
       }
 
       @mixin atMedium {
-        left: 1rem;
+        left: -1rem;
         top: -3rem;
       }
 
@@ -511,7 +520,7 @@
       @mixin atMedium {
         width: fit-content;
         left: 11vw;
-        font-size: 2.3vw;
+        font-size: 2rem;
         position: relative;
         text-align: center;
       }
@@ -606,13 +615,18 @@
 
     @mixin atSmall {
       margin-top: 0;
+      width: 60vw;
+      position: relative;
+      left: 65px;
     }
 
     @mixin atMedium {
-      margin-top: 2rem;
+      margin-top: 7rem;
+      left: 2vw;
     }
 
     @mixin atLarge {
+      width: 39vw;
       margin-top: 0;
     }
   }

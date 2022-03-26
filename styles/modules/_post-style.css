@@ -33,9 +33,20 @@
 .exhibition-page--expo__description {
   & .meta-box--text {
     margin: 0 0 10px;
-    font-size: 1rem;
     padding: 10px 20px;
     color: rgb(182, 29, 9);
+
+    @mixin atSmall {
+      font-size: 2.6vw;
+    }
+
+    @mixin atMedium {
+      font-size: 1rem;
+    }
+
+    @mixin atLarge {
+      font-size: 1rem;
+    }
   }
 
   & .meta-box--text a {
@@ -86,6 +97,20 @@
       margin-left: 6.5vw;
     }
 
+    &--single-blog {
+      @mixin atSmall {
+        margin-left: -10.5rem;
+      }
+
+      @mixin atMedium {
+        margin-left: -4.5rem;
+      }
+
+      @mixin atLarge {
+        margin-left: 6.5vw;
+      }
+    }
+
     &:hover {
       text-decoration: underline;
     }
@@ -106,6 +131,9 @@
 
 /* note styles */
 #my-notes {
+  @mixin atSmall {
+    padding: 0;
+  }
   & li {
     list-style: none;
     margin-bottom: 6rem;
@@ -117,11 +145,21 @@
   height: fit-content;
   display: inline-block;
   border: none;
-  font-size: 2.5rem;
   float: left;
   margin-left: 2.5rem;
   background-color: transparent;
   font-weight: 500;
+
+  @mixin atSmall {
+    width: 100%;
+    font-size: 4vw;
+    text-align: center;
+    margin: 0;
+  }
+
+  @mixin atMedium {
+    font-size: 2.5rem;
+  }
 }
 
 .note-text-field {
@@ -145,6 +183,9 @@
   padding: 5px 10px;
   background-color: rgb(89 83 134);
   color: #fff;
+  @mixin atSmall {
+    top: 2rem;
+  }
 }
 
 .note-update {
@@ -188,7 +229,7 @@
 /* Create Note */
 .note-create {
   background-color: #ddd;
-  padding: 20px;
+  padding: 20px 20px 50px 20px;
   margin-bottom: 20px;
 }
 
@@ -349,4 +390,54 @@
       margin-top: 0;
     }
   }
+}
+
+/* =============search overlay start======================== */
+
+.search {
+  &__row {
+    display: flex;
+    justify-content: space-around;
+  }
+  &__one-third {
+    width: 30%;
+    float: left;
+  }
+
+  &__section-title {
+    color: #333;
+    text-align: center;
+    font-size: 2.3rem;
+  }
+  &--list {
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+
+    &-item {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+  }
+  &--curator {
+    &-image {
+      max-width: 100%;
+      width: 7vw;
+      margin-right: 2rem;
+    }
+  }
+}
+
+events-section {
+  &__date-search-container {
+    width: 3rem;
+    height: 3rem;
+    font-size: 0.8rem;
+  }
+}
+
+.search-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0 auto;
+  margin-left: 4vw;
 }

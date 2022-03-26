@@ -44,7 +44,7 @@
 
     @mixin atMedium {
       left: 39vw;
-      top: -7rem;
+      top: -11rem;
     }
 
     @mixin atLarge {
@@ -140,6 +140,12 @@
   @mixin atLarge {
     margin-top: 0;
     width: 60vw;
+  }
+  &-notes {
+    @mixin atSmall {
+      width: 100%;
+      padding: 0;
+    }
   }
 }
 .exhibition-page--expo__content {
