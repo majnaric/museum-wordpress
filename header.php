@@ -9,7 +9,26 @@
     <header class="site-header">
       <div class="wrapper wrapper__header">
 
-        <div class="site-header__menu-icon"></div>
+      <!-- Hamburger Menu start -->
+        <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
+    <ul class="menu__box">
+      <li><a class="menu__item" href="<?php echo site_url() ?>">HOME</a></li>
+			<li><a class="menu__item" href="<?php echo site_url('/about-us') ?>">About</a></li>
+			<li><a class="menu__item" href="<?php echo site_url('/events') ?>">Events</a></li>
+			<li><a class="menu__item" href="<?php echo site_url('/exhibition') ?>">Exhibitions</a></li>
+			<li><a class="menu__item" href="<?php echo site_url('/departments') ?>">Departments</a></li>
+			<li><a class="menu__item" href="<?php echo site_url('/privacy-policy') ?>">Privacy Policy</a></li>
+			<li><a class="menu__item" href="<?php echo site_url('/blog') ?>">Blog</a></li>
+			<li><a class="menu__item" href="<?php echo esc_url(site_url('/search')) ?>"><i class="fa-solid fa-magnifying-glass js-search-trigger"></i></a></li>
+    </ul>
+        </div>
+
+        <!-- Hamburger Menu End -->
         
         <div class="site-header__menu-content">
           <!-- <div class="site-header__btn-container">

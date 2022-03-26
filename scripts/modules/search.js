@@ -69,7 +69,7 @@ class Search {
           </div>
           <div class="search__one-third">
             <h2 class="search__section-title">Departments</h2>
-            ${results.departments.length ? '<ul class="search--list">' : `<p>No programs match that search. <a href="${museumData.root_url}/departments">View all departments</a></p>`}
+            ${results.departments.length ? '<ul class="search--list">' : `<p>No departments match that search. <a class="btn__learn-more btn__learn-more--dark" href="${museumData.root_url}/departments">View all departments</a></p>`}
               ${results.departments.map(item => `<li class="search--list-item"><a class="btn__learn-more btn__learn-more--dark" href="${item.permalink}">${item.title}</a></li>`).join("")}
             ${results.departments.length ? "</ul>" : ""}
 
